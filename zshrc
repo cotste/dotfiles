@@ -29,7 +29,6 @@ compinit
 # End of lines added by compinstall
 
 #-----------SPECTRUM_LS------------------
-#! /bin/zsh
 # A script to make using 256 colors in zsh less painful.
 # P.C. Shyamshankar <sykora@lucentbeing.com>
 # Copied from http://github.com/sykora/etc/blob/master/zsh/functions/spectrum/
@@ -77,13 +76,13 @@ test -r $d && eval "$(dircolors $d)"
 autoload -Uz vcs_info
 #zstyle ':vcs_info:*' formats '(%b)%{%f%}'
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' stagedstr '%{%F{yellow}%B%}★%{%f%}'
-zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}★%{%f%}'
-zstyle ':vcs_info:*' formats "%{%F{012}%}◀%{%F{012}%} %b %c%u%{%f%} %{%F{012}%}► %{%F{007}%}"
+zstyle ':vcs_info:*' stagedstr '%{%F{yellow}%B%}%{%f%}'
+zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}%{%f%}'
+zstyle ':vcs_info:*' formats "%{%F{012}%}%{%F{012}%} %b %c%u%{%f%} %{%F{012}%}%{%F{007}%}"
 
-if [[ "$TERM" == "xterm" ]]; then
-	export TERM=xterm-256color
-fi
+#if [[ "$TERM" == "xterm" ]]; then
+#	export TERM=xterm-256color
+#fi
 
 function precmd() {
 
@@ -106,13 +105,11 @@ setprompt() {
 		autoload -U colors && colors
 	
 
-		for COLOR in RED GREEN YELLOW WHITE BLACK BLUE CYAN GRAY; do
-			eval PR_$COLOR='%{$fg[${(L)COLOR}]%}'
-			eval PR_BRIGHT_$COLOR='%{$fg_bold[${(L)COLOR}]%}'
-		done
+#		for COLOR in RED GREEN YELLOW WHITE BLACK BLUE CYAN GRAY; do
+#			eval PR_$COLOR='%{$fg[${(L)COLOR}]%}'
+#			eval PR_BRIGHT_$COLOR='%{$fg_bold[${(L)COLOR}]%}'
+#		done
 
-		PR_RESET="%{$reset_color%}"
-		#PR_PWD_DEFAULT=$'%{\e[38;5;78m%}'
 		PR_PWD_YELLOW=$'%{\e[38;5;226m%}'
 		PR_PWD_DEFAULT="%{%F{022}%}"
 
@@ -120,9 +117,13 @@ setprompt() {
 #${PR_BRIGHT_BLUE}\u2587${PR_RED}\u2518${PR_BRIGHT_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
 #${PR_BRIGHT_BLUE}\u2514${PR_GREEN}\u2586${PR_RESET} '
 
-		PROMPT=$'
-%{%F{013}%}%n%{%F{007%} ⇨ %{%F{014}%}%m%{%F{007}%} ⇨ ${PR_PWDCOLOR}%~${PR_BLUE} ${vcs_info_msg_0_}
-%{%b%}${PR_RESET}%{%F{013}%}➤%{%F{012}%}➤%{%F{014%}➤${PR_RESET} '
+	PROMPT=$'	
+%{%F{013}%}%n%{%F{007}%} ⇨ %{%F{014}%}%m%{%F{007}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
+%{%b%}%{%F{013}%}⮞%{%F{012}%}⮞%{%F{014}%}⮞%{%f%} '
+
+#  
+
+
 #		PROMPT=$'
 #${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE}) ${vcs_info_msg_0_}> ${PR_RESET}'
 	else
