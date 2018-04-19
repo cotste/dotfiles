@@ -1,3 +1,12 @@
 [submodule "vim/pack/cotste/start/VimCompletesMe"]
 	path = vim/pack/cotste/start/VimCompletesMe
 	url = https://github.com/ajh17/VimCompletesMe
+[submodule "vim/pack/cotste/start/vimtex"]
+	path = vim/pack/cotste/start/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule "vim/pack/cotste/start/vim-airline"]
+	path = vim/pack/cotste/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "vim/pack/cotste/start/vim-airline-themes"]
+	path = vim/pack/cotste/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
