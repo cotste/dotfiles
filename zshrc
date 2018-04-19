@@ -3,6 +3,13 @@ HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
+##--Expeditors specific settings--##
+export http_proxy=http://nss.chq.ei:8080
+export https_proxy=$http_proxy
+export ftp_proxy=$http_proxy
+export rsync_proxy=$http_proxy
+##--End Expeditors--##
+
 export PATH=/home/stephen/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
@@ -97,37 +104,41 @@ function precmd() {
 
 }
 
+#autoload -U promptinit; promptinit
+#prompt pure
+
+
 setprompt() {
 	setopt prompt_subst
 
 	autoload colors zsh/terminfo
 
 	if [[ "$terminfo[colors]" -ge 256 ]]; then
-		autoload -U colors && colors
+		autoload -u colors && colors
 	
 
-		for COLOR in RED GREEN YELLOW WHITE BLACK BLUE CYAN GRAY; do
-			eval PR_$COLOR='%{$fg[${(L)COLOR}]%}'
-			eval PR_BRIGHT_$COLOR='%{$fg_bold[${(L)COLOR}]%}'
+		for color in red green yellow white black blue cyan gray; do
+			eval pr_$color='%{$fg[${(l)color}]%}'
+			eval pr_bright_$color='%{$fg_bold[${(l)color}]%}'
 		done
 
-		PR_RESET="%{$reset_color%}"
-		#PR_PWD_DEFAULT=$'%{\e[38;5;78m%}'
-		PR_PWD_YELLOW=$'%{\e[38;5;226m%}'
-		PR_PWD_DEFAULT="%{%F{022}%}"
+		pr_reset="%{$reset_color%}"
+		#pr_pwd_default=$'%{\e[38;5;78m%}'
+		pr_pwd_yellow=$'%{\e[38;5;226m%}'
+		pr_pwd_default="%{%f{022}%}"
 
-#		PROMPT=$'${PR_RED} \u2584
-#${PR_BRIGHT_BLUE}\u2587${PR_RED}\u2518${PR_BRIGHT_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
-#${PR_BRIGHT_BLUE}\u2514${PR_GREEN}\u2586${PR_RESET} '
+#		prompt=$'${pr_red} \u2584
+#${pr_bright_blue}\u2587${pr_red}\u2518${pr_bright_white}%n${pr_blue}@${pr_bright_blue}%m ${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue})
+#${pr_bright_blue}\u2514${pr_green}\u2586${pr_reset} '
 
-		PROMPT=$'
-%{%F{013}%}%n%{%F{007%} ⇨ %{%F{014}%}%m%{%F{007}%} ⇨ ${PR_PWDCOLOR}%~${PR_BLUE} ${vcs_info_msg_0_}
-%{%b%}${PR_RESET}%{%F{013}%}➤%{%F{012}%}➤%{%F{014%}➤${PR_RESET} '
-#		PROMPT=$'
-#${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE}) ${vcs_info_msg_0_}> ${PR_RESET}'
+		prompt=$'
+%{%f{013}%}%n%{%f{007%} ⇨ %{%f{014}%}%m%{%f{007}%} ⇨ ${pr_pwdcolor}%~${pr_blue} ${vcs_info_msg_0_}
+%{%b%}${pr_reset}%{%f{013}%}➤%{%f{012}%}➤%{%f{014%}➤${pr_reset} '
+#		prompt=$'
+#${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue}) ${vcs_info_msg_0_}> ${pr_reset}'
 	else
 
-		PROMPT=$'%n@%m (%~)\n>>> '
+		prompt=$'%n@%m (%~)\n>>> '
 	fi
 }
 
@@ -151,7 +162,6 @@ alias du1="du -h --max-depth=1"
 #alias to make Octopress not glob
 alias rake="noglob rake"
 
-#alias pacman="pacman-color"
 alias vi="vim"
 
 
