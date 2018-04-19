@@ -1,3 +1,9 @@
 [submodule "vim/pack/stepcot/start/vim-airline"]
 	path = vim/pack/stepcot/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
+[submodule "gruvbox"]
+	path = gruvbox
+	url = https://github.com/morhetz/gruvbox.git
+[submodule "vim/pack/stepcot/start/gruvbox"]
+	path = vim/pack/stepcot/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
