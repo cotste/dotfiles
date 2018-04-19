@@ -12,7 +12,7 @@ set nu
 set nocompatible
 set tabstop=4
 set shiftwidth=4
-set background=light
+set background=dark
 set history=50
 set wildmode=list:longest,full
 set shortmess+=r
@@ -25,8 +25,9 @@ set t_Co=256
 set hlsearch
 set vb t_vb=".
 set incsearch
-colorscheme bubblegum2-mine
+"colorscheme bubblegum2-mine
 "colo mine
+colo gruvbox
 
 set cursorline
 hi clear Cursorline 
@@ -55,7 +56,7 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 "Powerline config
-set laststatus=2
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+"set laststatus=2
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
