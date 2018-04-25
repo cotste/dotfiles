@@ -6,7 +6,7 @@ filetype plugin indent on
 "au filetype c setlocal mp=gcc\ %
 
 ":let java_highlight_all=1
-
+set path+=**
 set guifont=Inconsolata\ 9
 set nu
 set nocompatible

@@ -114,13 +114,13 @@ setprompt() {
 	autoload colors zsh/terminfo
 
 	if [[ "$terminfo[colors]" -ge 256 ]]; then
-		autoload -u colors && colors
+		autoload -U colors && colors
 	
 
-		for color in red green yellow white black blue cyan gray; do
-			eval pr_$color='%{$fg[${(l)color}]%}'
-			eval pr_bright_$color='%{$fg_bold[${(l)color}]%}'
-		done
+#		for color in red green yellow white black blue cyan gray; do
+#			eval pr_$color='%{$fg[${(l)color}]%}'
+#			eval pr_bright_$color='%{$fg_bold[${(l)color}]%}'
+#		done
 
 		pr_reset="%{$reset_color%}"
 		#pr_pwd_default=$'%{\e[38;5;78m%}'
@@ -132,8 +132,8 @@ setprompt() {
 #${pr_bright_blue}\u2514${pr_green}\u2586${pr_reset} '
 
 		prompt=$'
-%{%f{013}%}%n%{%f{007%} ⇨ %{%f{014}%}%m%{%f{007}%} ⇨ ${pr_pwdcolor}%~${pr_blue} ${vcs_info_msg_0_}
-%{%b%}${pr_reset}%{%f{013}%}➤%{%f{012}%}➤%{%f{014%}➤${pr_reset} '
+%{%F{166}%}%n%{%F{012%} ⇨ %{%F{011}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~${006} ${vcs_info_msg_0_}
+%{%b%}${pr_reset}%{%F{166}%}➤%{%F{003}%}➤%{%F{002%}➤${pr_reset} '
 #		prompt=$'
 #${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue}) ${vcs_info_msg_0_}> ${pr_reset}'
 	else
