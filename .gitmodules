@@ -13,3 +13,6 @@
 [submodule "vim/pack/cotste/start/vim-ps1"]
 	path = vim/pack/cotste/start/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
+[submodule "vim/pack/cotste/start/vim-tmux-navigator"]
+	path = vim/pack/cotste/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
