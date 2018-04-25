@@ -10,3 +10,6 @@
 [submodule "vim/pack/cotste/start/vim-airline-themes"]
 	path = vim/pack/cotste/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "vim/pack/cotste/start/vim-ps1"]
+	path = vim/pack/cotste/start/vim-ps1
+	url = https://github.com/PProvost/vim-ps1.git
