@@ -4,7 +4,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 ##--Expeditors specific settings--##
-export http_proxy=http://nss.chq.ei:8080
+#export http_proxy=http://nss.chq.ei:8080
 export https_proxy=$http_proxy
 export ftp_proxy=$http_proxy
 export rsync_proxy=$http_proxy
@@ -132,8 +132,8 @@ setprompt() {
 #${pr_bright_blue}\u2514${pr_green}\u2586${pr_reset} '
 
 		prompt=$'
-%{%F{166}%}%n%{%F{012%} ⇨ %{%F{011}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~${006} ${vcs_info_msg_0_}
-%{%b%}${pr_reset}%{%F{166}%}➤%{%F{003}%}➤%{%F{002%}➤${pr_reset} '
+%{%F{166}%}%n%{%F{012}%} ⇨ %{%F{011}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
+%{%b%}${pr_reset}%{%F{166}%}➤%{%F{003}%}➤%{%F{002}%}➤%{%f%} '
 #		prompt=$'
 #${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue}) ${vcs_info_msg_0_}> ${pr_reset}'
 	else
