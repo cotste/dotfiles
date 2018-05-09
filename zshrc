@@ -16,7 +16,7 @@ export PATH=/home/stephen/bin:$PATH
 #export CLASSPATH=/usr/share/maven-repo/
 export EDITOR=vim
 
-setopt correct appendhistory autocd extendedglob nomatch notify
+setopt correct appendhistory autocd extendedglob nomatch notify inc_append_history
 unsetopt beep
 bindkey -v
 bindkey "\e[7~" beginning-of-line
@@ -132,8 +132,8 @@ setprompt() {
 #${pr_bright_blue}\u2514${pr_green}\u2586${pr_reset} '
 
 		prompt=$'
-%{%F{166}%}%n%{%F{012}%} ⇨ %{%F{011}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
-%{%b%}${pr_reset}%{%F{166}%}➤%{%F{003}%}➤%{%F{002}%}➤%{%f%} '
+%{%F{014}%}%n%{%F{012}%} ⇨ %{%F{004}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
+%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
 #		prompt=$'
 #${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue}) ${vcs_info_msg_0_}> ${pr_reset}'
 	else

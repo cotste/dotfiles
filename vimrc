@@ -25,9 +25,9 @@ set t_Co=256
 set hlsearch
 set vb t_vb=".
 set incsearch
-"colorscheme bubblegum2-mine
+colorscheme bubblegum2-mine
 "colo mine
-colo gruvbox
+"colo gruvbox
 
 "NERDTree settings
 
