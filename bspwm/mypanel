@@ -5,12 +5,16 @@ export PANEL_FONT
 #"-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1"
 PANEL_FIFO=/tmp/panelfifo
 
+battery() {
+	echo "test bat"
+}
+
+
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
 function panel_bar {
-	echo "test text" > $PANEL_FIFO &
-
-	echo $PANEL_FIFO
+	buf=""
+	buf="${buf} $(battery)"
 }
 
-panel_bar | lemonbar  -g x20 -B "#fff" -F "#000" -f "$PANEL_FONT" &
+panel_bar | lemonbar  -g x20 -B "#222222" -F "#cccccc" -f "$PANEL_FONT" &
