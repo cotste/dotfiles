@@ -1,0 +1,16 @@
+#!/bin/sh
+PANEL_FONT="-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+export PANEL_FONT
+
+#"-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1"
+PANEL_FIFO=/tmp/panelfifo
+
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+function panel_bar {
+	echo "test text" > $PANEL_FIFO &
+
+	echo $PANEL_FIFO
+}
+
+panel_bar | lemonbar  -g x20 -B "#fff" -F "#000" -f "$PANEL_FONT" &
