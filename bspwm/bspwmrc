@@ -1,4 +1,5 @@
 #! /bin/sh
+killall sxhkd
 
 sxhkd &
 
@@ -19,4 +20,4 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Surf desktop='^2' state=fullscreen
 bspc rule -a mpv desktop='^5' state=fullscree
 
-
+killall mypanel; ./mypanel &
