@@ -29,6 +29,8 @@ colorscheme bubblegum2-mine
 "colo mine
 "colo gruvbox
 
+"Spell check
+noremap <silent> <F6> :setlocal spell! spell?<CR>
 "NERDTree settings
 
 map <silent> <F3> :NERDTree<CR>k
