@@ -22,3 +22,6 @@
 [submodule "vim/pack/cotste/start/vim-autoclose"]
 	path = vim/pack/cotste/start/vim-autoclose
 	url = https://github.com/Townk/vim-autoclose.git
+[submodule "vim/pack/cotste/start/vim-syntastic"]
+	path = vim/pack/cotste/start/vim-syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
