@@ -6,7 +6,7 @@ filetype plugin indent on
 "au filetype c setlocal mp=gcc\ %
 
 ":let java_highlight_all=1
-set path+=**
+"set path+=**
 set guifont=Inconsolata\ 9
 set nu
 set nocompatible
@@ -25,9 +25,13 @@ set t_Co=256
 set hlsearch
 set vb t_vb=".
 set incsearch
-colorscheme bubblegum2-mine
+autocmd FileType python setlocal foldmethod=indent
+autocmd FileType json setlocal foldmethod=indent
+set foldignore=
+"colorscheme bubblegum2-mine
 "colo mine
 "colo gruvbox
+colo Tomorrow-Night
 
 "Spell check
 noremap <silent> <F6> :setlocal spell! spell?<CR>
