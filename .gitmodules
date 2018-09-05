@@ -19,3 +19,6 @@
 [submodule "vim/pack/cotste/start/vim-javascript"]
 	path = vim/pack/cotste/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim/pack/cotste/start/vim-autoclose"]
+	path = vim/pack/cotste/start/vim-autoclose
+	url = https://github.com/Townk/vim-autoclose.git
