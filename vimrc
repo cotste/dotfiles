@@ -66,6 +66,9 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+"syntastic
+let g:syntastic_javascript_checkers=['eslint']
+
 "Powerline config
 "set laststatus=2
 "python3 from powerline.vim import setup as powerline_setup
