@@ -16,3 +16,6 @@
 [submodule "vim/pack/cotste/start/vim-tmux-navigator"]
 	path = vim/pack/cotste/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "vim/pack/cotste/start/vim-javascript"]
+	path = vim/pack/cotste/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
