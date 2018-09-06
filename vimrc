@@ -12,6 +12,7 @@ set nu
 set nocompatible
 set tabstop=4
 set shiftwidth=4
+set expandtab
 set background=dark
 set history=50
 set wildmode=list:longest,full
@@ -30,8 +31,8 @@ autocmd FileType json setlocal foldmethod=indent
 set foldignore=
 "colorscheme bubblegum2-mine
 "colo mine
-"colo gruvbox
-colo Tomorrow-Night
+colo gruvbox
+"colo Tomorrow-Night
 
 "Spell check
 noremap <silent> <F6> :setlocal spell! spell?<CR>
