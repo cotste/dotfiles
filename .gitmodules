@@ -25,6 +25,3 @@
 [submodule "vim/pack/cotste/start/ale"]
 	path = vim/pack/cotste/start/ale
 	url = https://github.com/w0rp/ale.git
-[submodule "vim/pack/cotste/start/spf13-vim-autoclose"]
-	path = vim/pack/cotste/start/spf13-vim-autoclose
-	url = https://github.com/spf13/vim-autoclose.git
