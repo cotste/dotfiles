@@ -1,7 +1,11 @@
 syntax on
-filetype plugin indent on
 
 "File type settings
+filetype plugin indent on
+
+" Fold settings
+autocmd FileType python setlocal foldmethod=indent
+autocmd FileType json setlocal foldmethod=indent
 
 "Markdown Settings
 au! BufRead,BufNewFile *.md       set filetype=.mkd
@@ -38,9 +42,9 @@ set t_Co=256
 set hlsearch
 set vb t_vb=".
 set incsearch
-autocmd FileType python setlocal foldmethod=indent
-autocmd FileType json setlocal foldmethod=indent
 set foldignore=
+
+"ColorScheme settings
 "colorscheme bubblegum2-mine
 "colo mine
 colo gruvbox
@@ -77,7 +81,7 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 \set guioptions+=m <Bar>
 \endif<CR>
 
-filetype plugin on
+"Auto Completion
 set omnifunc=syntaxcomplete#Complete
 
 "syntastic
