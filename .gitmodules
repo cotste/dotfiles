@@ -1,0 +1,36 @@
+[submodule "vim/bundle/Vundle"]
+	path = vim/bundle/Vundle
+	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "vim/bundle/VimCompletesMe"]
+	path = vim/bundle/VimCompletesMe
+	url = https://github.com/ajh17/VimCompletesMe
+[submodule "vim/bundle/vimtex"]
+	path = vim/bundle/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "vim/bundle/vim-airline-themes"]
+	path = vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "vim/bundle/vim-ps1"]
+	path = vim/bundle/vim-ps1
+	url = https://github.com/PProvost/vim-ps1.git
+[submodule "vim/bundle/vim-tmux-navigator"]
+	path = vim/bundle/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim/bundle/ale"]
+	path = vim/bundle/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/tern_for_vim"]
+	path = vim/bundle/tern_for_vim
+	url = https://github.com/ternjs/tern_for_vim.git
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
