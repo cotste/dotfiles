@@ -82,7 +82,6 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 \endif<CR>
 
 "Auto Completion
-"let g:ycm_server_python_interpreter = '/usr/bin/python2'
 set omnifunc=syntaxcomplete#Complete
 
 "syntastic
