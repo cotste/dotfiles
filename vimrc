@@ -1,6 +1,18 @@
 syntax on
 filetype plugin indent on
 
+"File type settings
+
+"Markdown Settings
+au! BufRead,BufNewFile *.md       set filetype=.mkd
+au! BufRead,BufNewFile *.markdown set filetype=.mkd
+
+au! BufRead,BufNewFile *.md       setlocal spell
+au! BufRead,BufNewFile *.markdown setlocal spell
+
+au! BufRead,BufNewFile *.md       setlocal textwidth=80
+au! BufRead,BufNewFile *.markdown setlocal textwidth=80
+
 "au filetype java setlocal mp=javac\ %
 "au filetype cpp setlocal mp=g++\ %
 "au filetype c setlocal mp=gcc\ %
@@ -10,8 +22,8 @@ filetype plugin indent on
 set guifont=Inconsolata\ 9
 set nu
 set nocompatible
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set background=dark
 set history=50
@@ -36,6 +48,7 @@ colo gruvbox
 
 "Spell check
 noremap <silent> <F6> :setlocal spell! spell?<CR>
+
 "NERDTree settings
 
 map <silent> <F3> :NERDTree<CR>k
