@@ -10,8 +10,8 @@ set path+=**
 set guifont=Inconsolata\ 9
 set nu
 set nocompatible
-set tabstop=4
-set shiftwidth=4
+set tabstop=2 expandtab
+set shiftwidth=2
 set background=dark
 set history=50
 set wildmode=list:longest,full
@@ -26,6 +26,7 @@ set hlsearch
 set vb t_vb=".
 set incsearch
 
+
 "Line numbering
 set number relativenumber
 augroup numbertoggle
@@ -34,6 +35,14 @@ augroup numbertoggle
 	autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
 augroup END
 
+"NERDTree settings
+map <silent> <F3> :NERDTree<CR>k
+noremap <Leader>f :NERDTreeToggle<Enter>
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeShowLineNumbers = 0
+
+
 "Color Schemes
 "colorscheme bubblegum2-mine
 "colo mine
@@ -41,15 +50,9 @@ colo gruvbox
 
 let g:airline_theme='gruvbox'
 
-"NERDTree settings
-map <silent> <F3> :NERDTree<CR>k
-noremap <Leader>f :NERDTreeToggle<Enter>
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-
 "Cursorline settings
 set cursorline
-hi clear Cursorline 
+hi clear Cursorline
 hi Cursorline gui=underline cterm=underline
 
 "Press Space to turn off highlighting and clear any message
@@ -68,7 +71,11 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 \set guioptions+=m <Bar>
 \endif<CR>
 
-set omnifunc=syntaxcomplete#Complete
+"Completion
+let g:ycm_server_python_interpreter='/usr/bin/python2'
+
+"set omnifunc=syntaxcomplete#Complete
+
 
 "Powerline config
 "set laststatus=2

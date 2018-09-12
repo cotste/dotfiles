@@ -85,7 +85,6 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr '%{%F{yellow}%B%}%{%f%}'
 zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}%{%f%}'
-<<<<<<< HEAD
 zstyle ':vcs_info:*' formats "%{%F{012}%}%{%F{012}%} %b %c%u%{%f%} %{%F{012}%} %{%F{007}%}"
 
 #if [[ "$TERM" == "xterm" ]]; then
