@@ -1,4 +1,5 @@
 #!/bin/sh
+
 PANEL_FONT="-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
 export PANEL_FONT
 
@@ -12,9 +13,11 @@ battery() {
 
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
-function panel_bar {
-	buf=""
-	buf="${buf} $(battery)"
-}
 
-panel_bar | lemonbar  -g x20 -B "#222222" -F "#cccccc" -f "$PANEL_FONT" &
+
+buf=""
+buf="${buf} $(battery)"
+
+echo $buf
+
+

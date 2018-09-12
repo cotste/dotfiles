@@ -25,12 +25,23 @@ set t_Co=256
 set hlsearch
 set vb t_vb=".
 set incsearch
-colorscheme bubblegum2-mine
+
+"Line numbering
+set number relativenumber
+augroup numbertoggle
+	autocmd!
+	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+	autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+augroup END
+
+"Color Schemes
+"colorscheme bubblegum2-mine
 "colo mine
-"colo gruvbox
+colo gruvbox
+
+let g:airline_theme='gruvbox'
 
 "NERDTree settings
-
 map <silent> <F3> :NERDTree<CR>k
 noremap <Leader>f :NERDTreeToggle<Enter>
 let NERDTreeMinimalUI = 1
@@ -57,7 +68,6 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 \set guioptions+=m <Bar>
 \endif<CR>
 
-filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 "Powerline config
