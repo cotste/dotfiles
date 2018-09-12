@@ -25,9 +25,6 @@
 [submodule "vim/pack/cotste/start/vim-fugitive"]
 	path = vim/pack/cotste/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/pack/cotste/start/tern_for_vim"]
-	path = vim/pack/cotste/start/tern_for_vim
-	url = https://github.com/ternjs/tern_for_vim.git
 [submodule "vim/pack/cotste/start/YouCompleteMe"]
 	path = vim/pack/cotste/start/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
