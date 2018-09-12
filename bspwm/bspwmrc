@@ -21,4 +21,4 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Surf desktop='^2' state=fullscreen
 bspc rule -a mpv desktop='^5' state=fullscree
 
-killall mypanel; /home/stephen/.config/bspwm/mypanel &
+./mypanel | lemonbar  -g x20 -B "#222222" -F "#cccccc" -f "$PANEL_FONT" &

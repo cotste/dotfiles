@@ -40,7 +40,6 @@ compinit
 # End of lines added by compinstall
 
 #-----------SPECTRUM_LS------------------
-#! /bin/zsh
 # A script to make using 256 colors in zsh less painful.
 # P.C. Shyamshankar <sykora@lucentbeing.com>
 # Copied from http://github.com/sykora/etc/blob/master/zsh/functions/spectrum/
@@ -92,9 +91,9 @@ zstyle ':vcs_info:*' stagedstr '%{%F{yellow}%B%}%{%f%}'
 zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}%{%f%}'
 zstyle ':vcs_info:*' formats "%{%F{012}%}%{%F{012}%} %b %c%u%{%f%} %{%F{012}%} %{%F{007}%}"
 
-if [[ "$TERM" == "xterm" ]]; then
-	export TERM=xterm-256color
-fi
+#if [[ "$TERM" == "xterm" ]]; then
+#	export TERM=xterm-256color
+#fi
 
 function precmd() {
 
@@ -169,3 +168,7 @@ alias rake="noglob rake"
 alias vi="vim"
 
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

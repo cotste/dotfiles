@@ -53,16 +53,32 @@ colo gruvbox
 "Spell check
 noremap <silent> <F6> :setlocal spell! spell?<CR>
 
-"NERDTree settings
+"Line numbering
+set number relativenumber
+augroup numbertoggle
+	autocmd!
+	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+	autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+augroup END
 
+"NERDTree settings
 map <silent> <F3> :NERDTree<CR>k
 noremap <Leader>f :NERDTreeToggle<Enter>
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+let NERDTreeShowLineNumbers = 0
+
+
+"Color Schemes
+"colorscheme bubblegum2-mine
+"colo mine
+colo gruvbox
+
+let g:airline_theme='gruvbox'
 
 "Cursorline settings
 set cursorline
-hi clear Cursorline 
+hi clear Cursorline
 hi Cursorline gui=underline cterm=underline
 
 "Press Space to turn off highlighting and clear any message
@@ -83,6 +99,8 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 
 "Auto Completion
 set omnifunc=syntaxcomplete#Complete
+let g:ycm_server_python_interpreter='/usr/bin/python2'
+
 
 "syntastic
 let g:syntastic_javascript_checkers=['eslint']

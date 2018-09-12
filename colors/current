@@ -1,71 +1,44 @@
 ! Black
-URxvt.color0: #222222
-URxvt.color8: #444444
+URxvt.color0: #282a2e
+URxvt.color8: #373b41
 
 ! Red
-URxvt.color1: #9e2b18
-URxvt.color9: #e5786d
+URxvt.color1: #a54242
+URxvt.color9: #cc6666
 
 ! Green
-URxvt.color2: #6e7b45
-URxvt.color10: #95e454
-
+!URxvt.color2: #afd787
+!URxvt.color10: #cff9a9
+URxvt.color2: #7ca454
+URxvt.color10: #afd787
 ! Yellow
-URxvt.color3: #eab93d
-URxvt.color11: #ffc123
+URxvt.color3: #de935f
+URxvt.color11: #f0c674
 
 ! Blue
-URxvt.color4: #204a87
-URxvt.color12: #87afff
+URxvt.color4: #5f819d
+URxvt.color12: #81a2be
 
-! Mangenta
-URxvt.color5: #ce5c00
-URxvt.color13: #f57900
+! Magenta
+URxvt.color5: #85678f
+URxvt.color13: #b294bb
 
-! Cyan 
-URxvt.color6: #89b6e2
-URxvt.color14: #46a4ff
-
-! White
-URxvt.color7:	#cccccc
-URxvt.color15: #ffffff
-
-!URxvt.background: rgba:0000/0000/0000/dddd
-*.background: #1c1c1c
-*.foreground: white
-
-
-! Black
-xterm.color0: #222222
-xterm.color8: #444444
-
-! Red
-xterm.color1: #e5786d
-xterm.color9: #9e2b18
-
-! Green
-xterm.color2: #95e454
-xterm.color10: #6e7b45
-
-! Yellow
-xterm.color3: #eab93d
-xterm.color11: #ffc123
-
-! Blue
-xterm.color4: #204a87
-xterm.color12: #87afff
-
-! Mangenta
-xterm.color5: #ce5c00
-xterm.color13: #f57900
-
-! Cyan 
-xterm.color6: #89b6e2
-xterm.color14: #46a4ff
+! Cyan
+URxvt.color6: #5e8d87
+URxvt.color14: #8abeb7
 
 ! White
-xterm.color7:	#cccccc
-xterm.color15: #ffffff
+URxvt.color7: #969896
+URxvt.color15: #c5c8c6
 
-!xterm.background: rgba:0000/0000/0000/dddd
-xterm.background: #1c1c1c
+URxvt.background: #282a2e
+URxvt.foreground: #c5c8c6
+
+
+!URxvt.background: rgba:0000/0000/0000/cccc
+!URxvt.background: rgba:55cc/3333/1177/cccc
+
+URxvt.colorUL: #b294bb
+
+!URxvt.background: rgba:1212/1212/1212/dddd
+!URxvt.background: rgba:55cc/3333/1177/cccc
