@@ -3,12 +3,8 @@ HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
-#nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
 ##--Expeditors specific settings--##
-#export http_proxy=http://nss.chq.ei:8080
+export http_proxy=http://nss.chq.ei:8080
 export https_proxy=$http_proxy
 export ftp_proxy=$http_proxy
 export rsync_proxy=$http_proxy
