@@ -36,7 +36,6 @@ compinit
 # End of lines added by compinstall
 
 #-----------SPECTRUM_LS------------------
-#! /bin/zsh
 # A script to make using 256 colors in zsh less painful.
 # P.C. Shyamshankar <sykora@lucentbeing.com>
 # Copied from http://github.com/sykora/etc/blob/master/zsh/functions/spectrum/
@@ -86,11 +85,15 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr '%{%F{yellow}%B%}%{%f%}'
 zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}%{%f%}'
+<<<<<<< HEAD
 zstyle ':vcs_info:*' formats "%{%F{012}%}%{%F{012}%} %b %c%u%{%f%} %{%F{012}%} %{%F{007}%}"
+=======
+zstyle ':vcs_info:*' formats "%{%F{012}%}%{%F{012}%} %b %c%u%{%f%} %{%F{012}%}%{%F{007}%}"
+>>>>>>> 3b3a396978c28ce03adf49fc073a95b30ed73187
 
-if [[ "$TERM" == "xterm" ]]; then
-	export TERM=xterm-256color
-fi
+#if [[ "$TERM" == "xterm" ]]; then
+#	export TERM=xterm-256color
+#fi
 
 function precmd() {
 
@@ -117,6 +120,7 @@ setprompt() {
 		autoload -U colors && colors
 	
 
+<<<<<<< HEAD
 #		for color in red green yellow white black blue cyan gray; do
 #			eval pr_$color='%{$fg[${(l)color}]%}'
 #			eval pr_bright_$color='%{$fg_bold[${(l)color}]%}'
@@ -136,6 +140,29 @@ setprompt() {
 %{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
 #		prompt=$'
 #${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue}) ${vcs_info_msg_0_}> ${pr_reset}'
+=======
+#		for COLOR in RED GREEN YELLOW WHITE BLACK BLUE CYAN GRAY; do
+#			eval PR_$COLOR='%{$fg[${(L)COLOR}]%}'
+#			eval PR_BRIGHT_$COLOR='%{$fg_bold[${(L)COLOR}]%}'
+#		done
+
+		PR_PWD_YELLOW=$'%{\e[38;5;226m%}'
+		PR_PWD_DEFAULT="%{%F{022}%}"
+
+#		PROMPT=$'${PR_RED} \u2584
+#${PR_BRIGHT_BLUE}\u2587${PR_RED}\u2518${PR_BRIGHT_WHITE}%n${PR_BLUE}@${PR_BRIGHT_BLUE}%m ${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE})
+#${PR_BRIGHT_BLUE}\u2514${PR_GREEN}\u2586${PR_RESET} '
+
+	PROMPT=$'	
+%{%F{002}%}%n%{%F{007}%} ⇨ %{%F{006}%}%m%{%F{007}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
+%{%b%}%{%F{002}%}⮞%{%F{003}%}⮞%{%F{166}%}⮞%{%f%} '
+
+#  
+
+
+#		PROMPT=$'
+#${PR_RESET}${PR_BLUE}(${PR_PWDCOLOR}%~${PR_BLUE}) ${vcs_info_msg_0_}> ${PR_RESET}'
+>>>>>>> 3b3a396978c28ce03adf49fc073a95b30ed73187
 	else
 
 		prompt=$'%n@%m (%~)\n>>> '
