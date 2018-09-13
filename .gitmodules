@@ -31,3 +31,6 @@
 [submodule "vim/pack/cotste/start/nerdtree-git-plugin"]
 	path = vim/pack/cotste/start/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "vim/pack/cotste/start/nerdtree"]
+	path = vim/pack/cotste/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
