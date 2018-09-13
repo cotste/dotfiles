@@ -28,3 +28,6 @@
 [submodule "vim/pack/cotste/start/vim-tmux-navigator"]
 	path = vim/pack/cotste/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "vim/pack/cotste/start/nerdtree-git-plugin"]
+	path = vim/pack/cotste/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git

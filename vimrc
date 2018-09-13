@@ -53,17 +53,26 @@ colo gruvbox
 "Spell check
 noremap <silent> <F6> :setlocal spell! spell?<CR>
 
-"NERDTree settings
+"Line numbering
+:set number relativenumber
 
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
+
+
+"NERDTree settings
 map <silent> <F3> :NERDTree<CR>k
-noremap <Leader>f :NERDTreeToggle<Enter>
+noremap <C-n> :NERDTreeToggle<Enter>
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
 "Cursorline settings
-set cursorline
-hi clear Cursorline 
-hi Cursorline gui=underline cterm=underline
+"set cursorline
+"hi clear Cursorline
+"hi Cursorline gui=underline cterm=underline
 
 "Press Space to turn off highlighting and clear any message
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
