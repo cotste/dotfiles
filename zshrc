@@ -84,13 +84,13 @@ function spectrum_bls() {
 d=.dircolors
 test -r $d && eval "$(dircolors $d)"
 
-# vcs_info configuration
-autoload -Uz vcs_info
-#zstyle ':vcs_info:*' formats '(%b)%{%f%}'
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' stagedstr '%{%F{yellow}%B%}%{%f%}'
-zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}%{%f%}'
-zstyle ':vcs_info:*' formats "%{%F{012}%}%{%F{012}%} %b %c%u%{%f%} %{%F{012}%} %{%F{007}%}"
+## vcs_info configuration
+#autoload -Uz vcs_info
+##zstyle ':vcs_info:*' formats '(%b)%{%f%}'
+#zstyle ':vcs_info:*' check-for-changes true
+#zstyle ':vcs_info:*' stagedstr '%{%F{yellow}%B%}%{%f%}'
+#zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}%{%f%}'
+#zstyle ':vcs_info:*' formats "%{%F{012}%}%{%F{012}%} %b %c%u%{%f%} %{%F{012}%} %{%F{007}%}"
 
 if [[ "$TERM" == "xterm" ]]; then
 	export TERM=xterm-256color
@@ -108,45 +108,45 @@ function precmd() {
 
 }
 
-#autoload -U promptinit; promptinit
-#prompt pure
+autoload -U promptinit; promptinit
+prompt pure
 
 
-setprompt() {
-	setopt prompt_subst
-
-	autoload colors zsh/terminfo
-
-	if [[ "$terminfo[colors]" -ge 256 ]]; then
-		autoload -U colors && colors
-	
-
-#		for color in red green yellow white black blue cyan gray; do
-#			eval pr_$color='%{$fg[${(l)color}]%}'
-#			eval pr_bright_$color='%{$fg_bold[${(l)color}]%}'
-#		done
-
-		pr_reset="%{$reset_color%}"
-		#pr_pwd_default=$'%{\e[38;5;78m%}'
-		pr_pwd_yellow=$'%{\e[38;5;226m%}'
-		pr_pwd_default="%{%f{022}%}"
-
-#		prompt=$'${pr_red} \u2584
-#${pr_bright_blue}\u2587${pr_red}\u2518${pr_bright_white}%n${pr_blue}@${pr_bright_blue}%m ${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue})
-#${pr_bright_blue}\u2514${pr_green}\u2586${pr_reset} '
-
-		prompt=$'
-%{%F{014}%}%n%{%F{012}%} ⇨ %{%F{004}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
-%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
+#setprompt() {
+#	setopt prompt_subst
+#
+#	autoload colors zsh/terminfo
+#
+#	if [[ "$terminfo[colors]" -ge 256 ]]; then
+#		autoload -U colors && colors
+#	
+#
+##		for color in red green yellow white black blue cyan gray; do
+##			eval pr_$color='%{$fg[${(l)color}]%}'
+##			eval pr_bright_$color='%{$fg_bold[${(l)color}]%}'
+##		done
+#
+#		pr_reset="%{$reset_color%}"
+#		#pr_pwd_default=$'%{\e[38;5;78m%}'
+#		pr_pwd_yellow=$'%{\e[38;5;226m%}'
+#		pr_pwd_default="%{%f{022}%}"
+#
+##		prompt=$'${pr_red} \u2584
+##${pr_bright_blue}\u2587${pr_red}\u2518${pr_bright_white}%n${pr_blue}@${pr_bright_blue}%m ${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue})
+##${pr_bright_blue}\u2514${pr_green}\u2586${pr_reset} '
+#
 #		prompt=$'
-#${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue}) ${vcs_info_msg_0_}> ${pr_reset}'
-	else
-
-		prompt=$'%n@%m (%~)\n>>> '
-	fi
-}
-
-setprompt
+#%{%F{014}%}%n%{%F{012}%} ⇨ %{%F{004}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
+#%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
+##		prompt=$'
+##${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue}) ${vcs_info_msg_0_}> ${pr_reset}'
+#	else
+#
+#		prompt=$'%n@%m (%~)\n>>> '
+#	fi
+#}
+#
+#setprompt
 
 if [ $(tty) = '/dev/tty1' ]; then
 	startx 2> /dev/null
