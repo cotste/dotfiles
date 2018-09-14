@@ -4,15 +4,9 @@
 [submodule "vim/pack/cotste/start/vim-ps1"]
 	path = vim/pack/cotste/start/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
-[submodule "vim/pack/cotste/start/vim-syntastic"]
-	path = vim/pack/cotste/start/vim-syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
 [submodule "vim/pack/cotste/start/ale"]
 	path = vim/pack/cotste/start/ale
 	url = https://github.com/w0rp/ale.git
-[submodule "vim/pack/cotste/start/YouCompleteMe"]
-	path = vim/pack/cotste/start/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "vim/pack/cotste/start/tern_for_vim"]
 	path = vim/pack/cotste/start/tern_for_vim
 	url = https://github.com/ternjs/tern_for_vim.git

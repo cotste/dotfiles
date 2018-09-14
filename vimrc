@@ -42,7 +42,6 @@ set t_Co=256
 set hlsearch
 set vb t_vb=".
 set incsearch
-set foldignore=
 
 "ColorScheme settings
 "colorscheme bubblegum2-mine
@@ -56,11 +55,11 @@ noremap <silent> <F6> :setlocal spell! spell?<CR>
 "Line numbering
 :set number relativenumber
 
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-:augroup END
+":augroup numbertoggle
+":  autocmd!
+":  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+":  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+":augroup END
 
 
 "NERDTree settings
