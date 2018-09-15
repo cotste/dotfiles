@@ -3,6 +3,8 @@ HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
+export PANEL_FIFO=/tmp/panelfifo
+
 ##--Expeditors specific settings--##
 #export http_proxy=http://nss.chq.ei:8080
 export https_proxy=$http_proxy

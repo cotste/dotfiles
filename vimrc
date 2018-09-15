@@ -31,12 +31,12 @@ set incsearch
 set number relativenumber
 augroup numbertoggle
 	autocmd!
-	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-	autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+	autocmd BufEnter,FocusGained,InsertLeave *.html,*.py,*.js,*.json,*.md set relativenumber
+	autocmd BufLeave,FocusLost,InsertEnter *.html,*.py,*.js,*.json,*.md set norelativenumber
 augroup END
 
 "NERDTree settings
-map <silent> <F3> :NERDTree<CR>k
+map <silent> <F3> :NERDTree<CR>
 noremap <Leader>f :NERDTreeToggle<Enter>
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1

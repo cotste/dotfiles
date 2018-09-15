@@ -1,7 +1,10 @@
 #! /bin/sh
 killall sxhkd
+killall lemonbar
+killall mypanel
 
 sxhkd &
+PANEL_FONT="-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -21,4 +24,5 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Surf desktop='^2' state=fullscreen
 bspc rule -a mpv desktop='^5' state=fullscree
 
-./mypanel | lemonbar  -g x20 -B "#222222" -F "#cccccc" -f "$PANEL_FONT" &
+~/.config/bspwm/mypanel &
+
