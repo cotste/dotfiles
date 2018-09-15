@@ -6,7 +6,7 @@ SAVEHIST=10000
 export PANEL_FIFO=/tmp/panelfifo
 
 ##--Expeditors specific settings--##
-export http_proxy=http://nss.chq.ei:8080
+#export http_proxy=http://nss.chq.ei:8080
 export https_proxy=$http_proxy
 export ftp_proxy=$http_proxy
 export rsync_proxy=$http_proxy

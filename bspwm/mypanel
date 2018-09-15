@@ -18,12 +18,13 @@ mkfifo "$PANEL_FIFO"
 buf='STest'
 buf="${buf} $(battery) Test"
 
-echo $buf > "$PANEL_FIFO" &
+#echo $buf > "$PANEL_FIFO" &
 
+bspc subscribe report > "$PANEL_FIFO" &
 
 ~/.config/bspwm/panel_bar < "$PANEL_FIFO" | lemonbar  -g x20 -B "#222222" -F "#cccccc" -f "$PANEL_FONT" | sh &
 
 
-wait
+#wait
 
-echo "wft??"
+#echo "wft??"
