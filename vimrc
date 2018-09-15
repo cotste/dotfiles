@@ -1,17 +1,34 @@
 syntax on
+
+"File type settings
 filetype plugin indent on
+
+" Fold settings
+autocmd FileType python setlocal foldmethod=indent
+autocmd FileType json setlocal foldmethod=indent
+
+"Markdown Settings
+au! BufRead,BufNewFile *.md       set filetype=.mkd
+au! BufRead,BufNewFile *.markdown set filetype=.mkd
+
+au! BufRead,BufNewFile *.md       setlocal spell
+au! BufRead,BufNewFile *.markdown setlocal spell
+
+au! BufRead,BufNewFile *.md       setlocal textwidth=80
+au! BufRead,BufNewFile *.markdown setlocal textwidth=80
 
 "au filetype java setlocal mp=javac\ %
 "au filetype cpp setlocal mp=g++\ %
 "au filetype c setlocal mp=gcc\ %
 
 ":let java_highlight_all=1
-set path+=**
+"set path+=**
 set guifont=Inconsolata\ 9
 set nu
 set nocompatible
-set tabstop=2 expandtab
+set tabstop=2
 set shiftwidth=2
+set expandtab
 set background=dark
 set history=50
 set wildmode=list:longest,full
@@ -25,7 +42,16 @@ set t_Co=256
 set hlsearch
 set vb t_vb=".
 set incsearch
+set foldignore=
 
+"ColorScheme settings
+"colorscheme bubblegum2-mine
+"colo mine
+colo gruvbox
+"colo Tomorrow-Night
+
+"Spell check
+noremap <silent> <F6> :setlocal spell! spell?<CR>
 
 "Line numbering
 set number relativenumber
@@ -71,11 +97,13 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 \set guioptions+=m <Bar>
 \endif<CR>
 
-"Completion
+"Auto Completion
+"set omnifunc=syntaxcomplete#Complete
 let g:ycm_server_python_interpreter='/usr/bin/python2'
 
-"set omnifunc=syntaxcomplete#Complete
 
+"syntastic
+let g:syntastic_javascript_checkers=['eslint']
 
 "Powerline config
 "set laststatus=2
