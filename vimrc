@@ -14,8 +14,8 @@ au! BufRead,BufNewFile *.markdown set filetype=.mkd
 au! BufRead,BufNewFile *.md       setlocal spell
 au! BufRead,BufNewFile *.markdown setlocal spell
 
-au! BufRead,BufNewFile *.md       setlocal textwidth=80
-au! BufRead,BufNewFile *.markdown setlocal textwidth=80
+"au! BufRead,BufNewFile *.md       setlocal textwidth=80
+"au! BufRead,BufNewFile *.markdown setlocal textwidth=80
 
 "au filetype java setlocal mp=javac\ %
 "au filetype cpp setlocal mp=g++\ %
@@ -92,6 +92,7 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 "Auto Completion
 "set omnifunc=syntaxcomplete#Complete
 "let g:ycm_server_python_interpreter = '/usr/bin/python2'
+let g:ycm_autoclose_preview_window_after_completion=1
 
 "syntastic
 let g:syntastic_javascript_checkers=['eslint']

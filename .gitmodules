@@ -28,3 +28,9 @@
 [submodule "vim/pack/cotste/start/nerdtree"]
 	path = vim/pack/cotste/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/pack/cotste/start/YouCompleteMe"]
+	path = vim/pack/cotste/start/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/pack/cotste/start/riv.vim"]
+	path = vim/pack/cotste/start/riv.vim
+	url = https://github.com/gu-fan/riv.vim.git
