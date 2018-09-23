@@ -31,11 +31,11 @@ URxvt.color14: #8abeb7
 URxvt.color7: #969896
 URxvt.color15: #c5c8c6
 
-URxvt.background: #282a2e
+!URxvt.background: #282a2e
 URxvt.foreground: #c5c8c6
 
 
-!URxvt.background: rgba:0000/0000/0000/cccc
+URxvt.background: rgba:0000/0000/0000/dddd
 !URxvt.background: rgba:55cc/3333/1177/cccc
 
 URxvt.colorUL: #b294bb

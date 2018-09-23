@@ -3,3 +3,4 @@
 while read -r line ; do
   printf "%s" "${line}"
 done
+

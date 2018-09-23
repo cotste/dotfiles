@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PANEL_FONT="-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+PANEL_FONT="-*-fixed-*-*-*-*-14-*-*-*-*-*-*-*"
 
 #PANEL_FONT="-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1"
 PANEL_FIFO=/tmp/panelfifo
@@ -14,17 +14,26 @@ battery() {
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
 
+clock() {
+  while true; do
+    DATE=$(date "+%T %a, %B %e %Y")
+#    printf "$DATE"
+    echo "$DATE" > "$PANEL_FIFO" 
+    sleep 5
+  done
+}
 
-buf='STest'
-buf="${buf} $(battery) Test"
+#bspc subscribe report > "$PANEL_FIFO" &
 
-#echo $buf > "$PANEL_FIFO" &
+#while true; do
+#  printf "$(clock)"
+#  sleep 1
+#done
 
-bspc subscribe report > "$PANEL_FIFO" &
+#buf='S'
+#buf="${buf} $(battery) $(clock)"
 
-~/.config/bspwm/panel_bar < "$PANEL_FIFO" | lemonbar  -g x20 -B "#222222" -F "#cccccc" -f "$PANEL_FONT" | sh &
+#echo "$buf" > "$PANEL_FIFO" &
+clock &
 
-
-#wait
-
-#echo "wft??"
+~/.config/bspwm/panel_bar < "$PANEL_FIFO" | lemonbar  -g x20 -B "#222222" -F "#cccccc" -f "$PANEL_FONT" -p 

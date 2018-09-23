@@ -45,10 +45,12 @@ set incsearch
 set foldignore=
 
 "ColorScheme settings
-"colorscheme bubblegum2-mine
+"colo bubblegum2-mine
 "colo mine
 colo gruvbox
-"colo Tomorrow-Night
+"colo Tomorrow-Night-Eighties-mine
+"colo dracula
+highlight Normal ctermbg=None
 
 "Spell check
 noremap <silent> <F6> :setlocal spell! spell?<CR>
@@ -63,16 +65,10 @@ augroup END
 
 "NERDTree settings
 map <silent> <F3> :NERDTree<CR>
-noremap <Leader>f :NERDTreeToggle<Enter>
+noremap <C-n> :NERDTreeToggle<Enter>
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowLineNumbers = 0
-
-
-"Color Schemes
-"colorscheme bubblegum2-mine
-"colo mine
-colo gruvbox
 
 let g:airline_theme='gruvbox'
 
