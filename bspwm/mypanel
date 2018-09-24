@@ -14,14 +14,31 @@ battery() {
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
 
-clock() {
-  while true; do
-    DATE=$(date "+%T %a, %B %e %Y")
+#clock() {
+#  while true; do
+#    DATE=$(date "+%T %a, %B %e %Y")
 #    printf "$DATE"
-    echo "$DATE" > "$PANEL_FIFO" 
-    sleep 5
-  done
-}
+ #   echo "$DATE" > "$PANEL_FIFO" 
+#    sleep 5
+#  done
+#}
+while true; do
+    NOWDATE=$(date "+%T %a, %B %e %Y")
+    echo -e "D $NOWDATE"
+    sleep 1 
+done > "$PANEL_FIFO" &
+
+while true; do
+  BAT=$(acpi | awk ' {print $4} ' | sed 's/.$//')
+  echo -e "B$BAT"
+  sleep 10
+done > "$PANEL_FIFO" &
+
+while true; do
+  VOL=$(amixer |grep 'Left: Playback' | awk ' {print $5} ' | sed 's/^.//;s/.$//')
+  echo -e "V$VOL"
+  sleep 30
+done > "$PANEL_FIFO" &
 
 #bspc subscribe report > "$PANEL_FIFO" &
 
@@ -34,6 +51,8 @@ clock() {
 #buf="${buf} $(battery) $(clock)"
 
 #echo "$buf" > "$PANEL_FIFO" &
-clock &
+#clock &
 
-~/.config/bspwm/panel_bar < "$PANEL_FIFO" | lemonbar  -g x20 -B "#222222" -F "#cccccc" -f "$PANEL_FONT" -p 
+#~/.config/bspwm/panel_bar < "$PANEL_FIFO" | lemonbar  -g x25 -B "#222222" -F "#cccccc" -f "$PANEL_FONT" | sh &
+~/.config/bspwm/panel_bar < "$PANEL_FIFO" | lemonbar  -g x25 -B "#222222" -F "#cccccc" -f "$PANEL_FONT" | sh &
+
