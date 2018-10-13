@@ -11,8 +11,11 @@ while read -r line ; do
     V*)
       vol="${line#?}"
       ;;
+    W*)
+      wifi="${line#?}"
+      ;;
   esac
-  printf "%s\n" "%{r}vol: ${vol} | bat: ${bat} | ${clock}"
+  printf "%s\n" "%{r}AP: ${wifi} | vol: ${vol} | bat: ${bat} | ${clock}"
 
 done
 

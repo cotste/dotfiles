@@ -6,7 +6,6 @@ killall mypanel
 #-------------------------------------------------------------------------------
 
 sxhkd &
-#PANEL_FONT="-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
