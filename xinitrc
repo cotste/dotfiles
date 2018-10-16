@@ -16,9 +16,9 @@ xset fp rehash
 
 #cairo-compmgr &
 
-#xcompmgr &
+xcompmgr &
 
-urxvtd &
+#urxvtd &
 
 sh ~/.fehbg &
 
@@ -44,7 +44,8 @@ conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
 
 #nm-applet & 
 
+exec bspwm
 #exec i3
 #exec /home/stephen/bin/startdwm
-exec awesome
+#exec awesome
 #exec wmii
