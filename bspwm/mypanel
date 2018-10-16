@@ -30,7 +30,9 @@ done > "$PANEL_FIFO" &
 
 while true; do
   BAT=$(acpi | grep 'Battery 0' | awk ' {print $4} ' | sed 's/.$//')
+  #BAT1=$(acpi | grep 'Battery 1' | awk ' {print $4} ' | sed 's/.$//')
   echo -e "B$BAT"
+  #echo -e "B1$BAT1"
   sleep 10
 done > "$PANEL_FIFO" &
 

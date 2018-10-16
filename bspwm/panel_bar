@@ -6,7 +6,10 @@ while read -r line ; do
       clock="${line#?}"
       ;;
     B*)
-      bat="${line#?}"
+      bat0="${line#?}"
+      ;;
+    B*)
+      bat1="${line#?}"
       ;;
     V*)
       vol="${line#?}"
