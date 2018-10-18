@@ -1,33 +1,52 @@
 [submodule "vim/pack/cotste/start/VimCompletesMe"]
 	path = vim/pack/cotste/start/VimCompletesMe
-	url = https://github.com/ajh17/VimCompletesMe
+  url = https://github.com/ajh17/VimCompletesMe
+  ignore = dirty
 [submodule "vim/pack/cotste/start/vimtex"]
 	path = vim/pack/cotste/start/vimtex
 	url = https://github.com/lervag/vimtex
+  ignore = dirty
 [submodule "vim/pack/cotste/start/vim-airline"]
 	path = vim/pack/cotste/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
+  ignore = dirty
 [submodule "vim/pack/cotste/start/vim-airline-themes"]
 	path = vim/pack/cotste/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+  ignore = dirty
 [submodule "vim/pack/cotste/start/vim-ps1"]
 	path = vim/pack/cotste/start/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
+  ignore = dirty
 [submodule "vim/pack/cotste/start/vim-tmux-navigator"]
 	path = vim/pack/cotste/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+  ignore = dirty
 [submodule "vim/pack/cotste/start/vim-syntastic"]
 	path = vim/pack/cotste/start/vim-syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+  ignore = dirty
 [submodule "vim/pack/cotste/start/ale"]
 	path = vim/pack/cotste/start/ale
 	url = https://github.com/w0rp/ale.git
+  ignore = dirty
 [submodule "vim/pack/cotste/start/vim-fugitive"]
 	path = vim/pack/cotste/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+  ignore = dirty
 [submodule "vim/pack/cotste/start/tern_for_vim"]
 	path = vim/pack/cotste/start/tern_for_vim
 	url = https://github.com/ternjs/tern_for_vim.git
+  ignore = dirty
 [submodule "vim/pack/cotste/start/YouCompleteMe"]
 	path = vim/pack/cotste/start/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+  ignore = dirty
+[submodule "vim/pack/cotste/start/nerdtree"]
+	path = vim/pack/cotste/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+  ignore = dirty
+[submodule "vim/pack/cotste/start/riv.vim"]
+	path = vim/pack/cotste/start/riv.vim
+	url = https://github.com/gu-fan/riv.vim.git
+  ignore = dirty
