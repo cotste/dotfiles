@@ -53,3 +53,7 @@
 [submodule "vim/pack/cotste/start/vim-devicons"]
 	path = vim/pack/cotste/start/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons.git
+  ignore = dirty
+[submodule "vim/pack/cotste/start/nord-vim"]
+	path = vim/pack/cotste/start/nord-vim
+	url = https://github.com/arcticicestudio/nord-vim.git

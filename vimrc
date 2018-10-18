@@ -44,10 +44,11 @@ set vb t_vb=".
 set incsearch
 set foldignore=
 
+colo nord
 "ColorScheme settings
 "colo bubblegum2-mine
 "colo mine
-colo gruvbox
+"colo gruvbox
 "colo Tomorrow-Night-Eighties-mine
 "colo dracula
 highlight Normal ctermbg=None
@@ -95,7 +96,7 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 
 "Auto Completion
 "set omnifunc=syntaxcomplete#Complete
-let g:ycm_server_python_interpreter='/usr/bin/python2'
+let g:ycm_server_python_interpreter='/usr/bin/python3'
 
 
 "syntastic
