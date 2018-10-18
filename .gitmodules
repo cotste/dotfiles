@@ -50,3 +50,6 @@
 	path = vim/pack/cotste/start/riv.vim
 	url = https://github.com/gu-fan/riv.vim.git
   ignore = dirty
+[submodule "vim/pack/cotste/start/vim-devicons"]
+	path = vim/pack/cotste/start/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons.git
