@@ -1,7 +1,21 @@
 syntax on
 
+if has('python')
+  command! Python python3
+else
+  command! Python python
+end
+
+
+
 "File type settings
 filetype plugin indent on
+
+"Macros
+let @h = "yypVr"
+let @n = "<C-e>ln"
+
+
 
 " Fold settings
 autocmd FileType python setlocal foldmethod=indent
@@ -93,9 +107,18 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
 "set omnifunc=syntaxcomplete#Complete
 "let g:ycm_server_python_interpreter = '/usr/bin/python2'
 let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_server_python_interpreter='python3'
 
 "syntastic
 let g:syntastic_javascript_checkers=['eslint']
+
+"Riv.vim
+let g:riv_temp_path='/mnt/c/Users/chq-stephenco/riv/'
+" Leave space at end of folds
+let g:riv_fold_blank = 1
+"Dont fold lists
+let g:riv_fold_level = 1
+
 
 "Powerline config
 "set laststatus=2
