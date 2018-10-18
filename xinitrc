@@ -14,6 +14,8 @@ fi
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
+setxkbmap -layout us -option ctrl:nocaps
+
 #cairo-compmgr &
 
 xcompmgr &
@@ -22,11 +24,11 @@ xcompmgr &
 
 sh ~/.fehbg &
 
-numlockx &
+#numlockx &
 
 xbindkeys & 
 
-xrdb ~/.Xresources &
+#xrdb ~/.Xresources &
 
 #thunar --daemon &
 
@@ -40,7 +42,7 @@ xrdb ~/.Xresources &
 
 #sh ~/code/shell/paperchanger.sh &
 
-conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
+#conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
 
 #nm-applet & 
 
