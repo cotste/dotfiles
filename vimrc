@@ -71,7 +71,10 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowLineNumbers = 0
 
-let g:airline_theme='gruvbox'
+let g:airline_theme='nord'
+
+"Riv Settings
+let g:riv_auto_format_table = 0
 
 "Cursorline settings
 set cursorline

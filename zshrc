@@ -78,7 +78,7 @@ function spectrum_bls() {
 #-------SPECTRUM_LS---------------
 
 
-d=.dircolors
+d=.dir_colors
 test -r $d && eval "$(dircolors $d)"
 
 # vcs_info configuration
