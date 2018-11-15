@@ -71,7 +71,7 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowLineNumbers = 0
 
-let g:airline_theme='gruvbox'
+let g:airline_theme='nord'
 
 "Cursorline settings
 set cursorline

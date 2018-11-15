@@ -46,7 +46,7 @@ xbindkeys &
 
 #nm-applet & 
 
-exec bspwm
+#exec bspwm
 #exec i3
 #exec /home/stephen/bin/startdwm
 #exec awesome
