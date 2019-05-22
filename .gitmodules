@@ -10,3 +10,9 @@
 [submodule "vim/pack/cotste/start/vim-tmux-navigator"]
 	path = vim/pack/cotste/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "vim/pack/cotste/start/vim-airline"]
+	path = vim/pack/cotste/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/pack/cotste/start/vim-airline-themes"]
+	path = vim/pack/cotste/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
