@@ -57,11 +57,15 @@ set hlsearch
 set vb t_vb=".
 set incsearch
 
+"colo nord
 "ColorScheme settings
 "colorscheme bubblegum2-mine
 "colo mine
 colo gruvbox
 "colo Tomorrow-Night
+"colo Tomorrow-Night-Eighties-mine
+"colo dracula
+highlight Normal ctermbg=None
 
 "Spell check
 noremap <silent> <F6> :setlocal spell! spell?<CR>
@@ -81,6 +85,13 @@ map <silent> <F3> :NERDTree<CR>k
 noremap <C-n> :NERDTreeToggle<Enter>
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+let NERDTreeShowLineNumbers = 0
+
+let g:airline_theme='gruvbox'
+
+"Riv Settings
+let g:riv_auto_format_table = 0
+let g:riv_temp_path=0
 
 "Cursorline settings
 "set cursorline

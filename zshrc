@@ -8,17 +8,18 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 ##--Expeditors specific settings--##
-#export http_proxy=http://nss.chq.ei:8080
+export http_proxy=http://nss.chq.ei:8080
 export https_proxy=$http_proxy
 export ftp_proxy=$http_proxy
 export rsync_proxy=$http_proxy
 ##--End Expeditors--##
 
-export PATH=/home/stephen/bin:$PATH
+export PATH=/mnt/c/Users/chq-stephenco/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
 #export CLASSPATH=/usr/share/maven-repo/
 export EDITOR=vim
+source ~/qmk_utils/activate_wsl.sh 
 
 setopt correct appendhistory autocd extendedglob nomatch notify inc_append_history
 unsetopt beep
