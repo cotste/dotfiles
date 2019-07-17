@@ -8,13 +8,13 @@
 	path = vim/pack/cotste/opt/ale
 	url = https://github.com/w0rp/ale.git
 [submodule "vim/pack/cotste/start/tern_for_vim"]
-	path = vim/pack/cotste/opt/tern_for_vim
+	path = vim/pack/cotste/start/tern_for_vim
 	url = https://github.com/ternjs/tern_for_vim.git
-[submodule "vim/pack/cotste/start/vim-ariline-themes"]
-	path = vim/pack/cotste/start/vim-ariline-themes
+[submodule "vim/pack/cotste/start/vim-airline-themes"]
+	path = vim/pack/cotste/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "vim/pack/cotste/start/vim-ariline"]
-	path = vim/pack/cotste/start/vim-ariline
+[submodule "vim/pack/cotste/start/vim-airline"]
+	path = vim/pack/cotste/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
 [submodule "vim/pack/cotste/start/vim-fugitive"]
 	path = vim/pack/cotste/start/vim-fugitive
@@ -33,4 +33,8 @@
 	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "vim/pack/cotste/start/riv.vim"]
 	path = vim/pack/cotste/opt/riv.vim
-	url = https://github.com/gu-fan/riv.vim.git
+  url = https://github.com/gu-fan/riv.vim.git
+[submodule "vim/pack/cotste/start/nord-vim"]
+  path = vim/pack/cotste/start/nord-vim
+  url = https://github.com/arcticicestudio/nord-vim.git
+
