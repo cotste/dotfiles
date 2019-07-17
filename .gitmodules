@@ -1,14 +1,14 @@
 [submodule "vim/pack/cotste/start/vimtex"]
-	path = vim/pack/cotste/start/vimtex
+	path = vim/pack/cotste/opt/vimtex
 	url = https://github.com/lervag/vimtex
 [submodule "vim/pack/cotste/start/vim-ps1"]
-	path = vim/pack/cotste/start/vim-ps1
+	path = vim/pack/cotste/opt/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
 [submodule "vim/pack/cotste/start/ale"]
-	path = vim/pack/cotste/start/ale
+	path = vim/pack/cotste/opt/ale
 	url = https://github.com/w0rp/ale.git
 [submodule "vim/pack/cotste/start/tern_for_vim"]
-	path = vim/pack/cotste/start/tern_for_vim
+	path = vim/pack/cotste/opt/tern_for_vim
 	url = https://github.com/ternjs/tern_for_vim.git
 [submodule "vim/pack/cotste/start/vim-ariline-themes"]
 	path = vim/pack/cotste/start/vim-ariline-themes
@@ -32,5 +32,5 @@
 	path = vim/pack/cotste/start/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "vim/pack/cotste/start/riv.vim"]
-	path = vim/pack/cotste/start/riv.vim
+	path = vim/pack/cotste/opt/riv.vim
 	url = https://github.com/gu-fan/riv.vim.git

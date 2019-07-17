@@ -19,7 +19,7 @@ export PATH=/mnt/c/Users/chq-stephenco/bin:$PATH
 #export CATALINA_HOME=/usr/share/tomcat6
 #export CLASSPATH=/usr/share/maven-repo/
 export EDITOR=vim
-source ~/qmk_utils/activate_wsl.sh 
+#source ~/qmk_utils/activate_wsl.sh 
 
 setopt correct appendhistory autocd extendedglob nomatch notify inc_append_history
 unsetopt beep
@@ -105,49 +105,48 @@ function precmd() {
 		else
 				PR_PWDCOLOR="%{%F{001}%}"
 		fi
-		vcs_info
+		#vcs_info
 
 }
 
 autoload -U promptinit; promptinit
-prompt pure
+# prompt pure
 
 
-#setprompt() {
-#	setopt prompt_subst
-#
-#	autoload colors zsh/terminfo
-#
-#	if [[ "$terminfo[colors]" -ge 256 ]]; then
-#		autoload -U colors && colors
-#	
-#
-##		for color in red green yellow white black blue cyan gray; do
-##			eval pr_$color='%{$fg[${(l)color}]%}'
-##			eval pr_bright_$color='%{$fg_bold[${(l)color}]%}'
-##		done
-#
-#		pr_reset="%{$reset_color%}"
-#		#pr_pwd_default=$'%{\e[38;5;78m%}'
-#		pr_pwd_yellow=$'%{\e[38;5;226m%}'
-#		pr_pwd_default="%{%f{022}%}"
-#
-##		prompt=$'${pr_red} \u2584
-##${pr_bright_blue}\u2587${pr_red}\u2518${pr_bright_white}%n${pr_blue}@${pr_bright_blue}%m ${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue})
-##${pr_bright_blue}\u2514${pr_green}\u2586${pr_reset} '
-#
+setprompt() {
+	setopt prompt_subst
+
+	autoload colors zsh/terminfo
+
+	if [[ "$terminfo[colors]" -ge 256 ]]; then
+		autoload -U colors && colors
+
+#		for color in red green yellow white black blue cyan gray; do
+#			eval pr_$color='%{$fg[${(l)color}]%}'
+#			eval pr_bright_$color='%{$fg_bold[${(l)color}]%}'
+#		done
+
+		pr_reset="%{$reset_color%}"
+		#pr_pwd_default=$'%{\e[38;5;78m%}'
+		pr_pwd_yellow=$'%{\e[38;5;226m%}'
+		pr_pwd_default="%{%f{022}%}"
+
+#		prompt=$'${pr_red} \u2584
+#${pr_bright_blue}\u2587${pr_red}\u2518${pr_bright_white}%n${pr_blue}@${pr_bright_blue}%m ${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue})
+#${pr_bright_blue}\u2514${pr_green}\u2586${pr_reset} '
+
+		prompt=$'
+%{%F{014}%}%n%{%F{012}%} ⇨ %{%F{004}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
+%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
 #		prompt=$'
-#%{%F{014}%}%n%{%F{012}%} ⇨ %{%F{004}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
-#%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
-##		prompt=$'
-##${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue}) ${vcs_info_msg_0_}> ${pr_reset}'
-#	else
-#
-#		prompt=$'%n@%m (%~)\n>>> '
-#	fi
-#}
-#
-#setprompt
+#${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue}) ${vcs_info_msg_0_}> ${pr_reset}'
+	else
+
+		prompt=$'%n@%m (%~)\n>>> '
+	fi
+}
+
+setprompt
 
 if [ $(tty) = '/dev/tty1' ]; then
 	startx 2> /dev/null

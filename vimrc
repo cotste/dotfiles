@@ -57,14 +57,15 @@ set hlsearch
 set vb t_vb=".
 set incsearch
 
-"colo nord
+colo nord
 "ColorScheme settings
 "colorscheme bubblegum2-mine
 "colo mine
-colo gruvbox
+"colo gruvbox
 "colo Tomorrow-Night
 "colo Tomorrow-Night-Eighties-mine
 "colo dracula
+"colo solarized
 highlight Normal ctermbg=None
 
 "Spell check
@@ -87,8 +88,8 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowLineNumbers = 0
 
-let g:airline_theme='gruvbox'
-
+let g:airline_theme='nord'
+set noshowmode
 "Riv Settings
 let g:riv_auto_format_table = 0
 let g:riv_temp_path=0
