@@ -4,7 +4,7 @@
 [submodule "vim/pack/cotste/start/vim-ps1"]
 	path = vim/pack/cotste/opt/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
-[submodule "vim/pack/cotste/start/ale"]
+[submodule "vim/pack/cotste/opt/ale"]
 	path = vim/pack/cotste/opt/ale
 	url = https://github.com/w0rp/ale.git
 [submodule "vim/pack/cotste/start/tern_for_vim"]
