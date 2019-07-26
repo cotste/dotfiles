@@ -49,3 +49,18 @@
 [submodule "nvim/pack/cotste/start/vim-airline-themes"]
 	path = nvim/pack/cotste/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "nvim/pack/cotste/start/vim-airline"]
+	path = nvim/pack/cotste/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "nvim/pack/cotste/start/vim-fugitive"]
+	path = nvim/pack/cotste/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "nvim/pack/cotste/start/vim-tmux-navigator"]
+	path = nvim/pack/cotste/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "nvim/pack/cotste/opt/nord-vim"]
+	path = nvim/pack/cotste/opt/nord-vim
+	url = https://github.com/arcticicestudio/nord-vim.git
+[submodule "nvim/pack/cotste/opt/riv-vim"]
+	path = nvim/pack/cotste/opt/riv-vim
+	url = https://github.com/gu-fan/riv.vim.git
