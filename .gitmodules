@@ -34,8 +34,8 @@
 [submodule "vim/pack/cotste/opt/riv.vim"]
 	path = vim/pack/cotste/opt/riv.vim
   url = https://github.com/gu-fan/riv.vim.git
-[submodule "vim/pack/cotste/start/nord-vim"]
-  path = vim/pack/cotste/start/nord-vim
+[submodule "vim/pack/cotste/opt/nord-vim"]
+  path = vim/pack/cotste/opt/nord-vim
   url = https://github.com/arcticicestudio/nord-vim.git
 [submodule "vim/pack/cotste/start/vim-devicons"]
   path = vim/pack/cotste/start/vim-devicons
@@ -43,3 +43,9 @@
 [submodule "vim/pack/cotste/start/vim-ps1"]
   path = vim/pack/cotste/start/vim-ps1
   url = https://github.com/PProvost/vim-ps1.git
+[submodule "vim/pack/cotste/opt/srcery-vim"]
+	path = vim/pack/cotste/opt/srcery-vim
+	url = https://github.com/srcery-colors/srcery-vim
+[submodule "nvim/pack/cotste/start/vim-airline-themes"]
+	path = nvim/pack/cotste/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
