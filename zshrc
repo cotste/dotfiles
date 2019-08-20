@@ -8,7 +8,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-. proxy_configs
+. /home/chq-stephenco/proxy_configs
 
 export PATH=/mnt/c/Users/chq-stephenco/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun

@@ -1,3 +1,6 @@
+
+packadd coc.nvim
+packadd defx
 packadd nord-vim
 
 set autoindent
@@ -11,9 +14,12 @@ set expandtab
 set background=dark
 
 "Color settings
-colo nord
-let g:airline_theme='nord'
-let g:airline_powerline_fonts=1
+color nord
+let g:airline_theme = 'nord'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#coc#enabled = 1
+
+"highlight CocFloating ctermbg=15
 
 "Fold settings
 autocmd FileType python setlocal foldmethod=indent
@@ -32,9 +38,28 @@ noremap <silent> <F6> :setlocal spell! spell?<CR>
 "Line numbering
 :set number relativenumber
 
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-:augroup END
+":augroup numbertoggle
+":  autocmd!
+":  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+":  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+":augroup END
 
+augroup defx_settings
+  autocmd FileType defx call s:defx_my_settings()
+augroup END
+
+call defx#custom#option('_', {
+            \'winwidth' : 40,
+            \'split' : 'vertical',
+            \'direction' : 'topleft',
+            \})
+
+function! s:defx_my_settings() abort
+    "Define mappings
+    nnoremap <silent><buffer><expr> <CR> defx#do_action('drop')
+    nnoremap <silent><buffer><expr> q defx#do_action('quit')
+    nnoremap <silent><buffer><expr> u defx#do_action('cd', ['..'])
+    nnoremap <silent><buffer><expr> s defx#do_action('open', 'vsplit')
+endfunction
+
+noremap <C-n> :Defx<Enter>
