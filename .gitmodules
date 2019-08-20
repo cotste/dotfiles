@@ -64,3 +64,10 @@
 [submodule "nvim/pack/cotste/opt/riv-vim"]
 	path = nvim/pack/cotste/opt/riv-vim
 	url = https://github.com/gu-fan/riv.vim.git
+[submodule "nvim/pack/cotste/opt/coc.nvim"]
+	path = nvim/pack/cotste/opt/coc.nvim
+	url = https://github.com/neoclide/coc.nvim.git
+	branch = release
+[submodule "nvim/pack/cotste/opt/defx"]
+	path = nvim/pack/cotste/opt/defx
+	url = https://github.com/Shougo/defx.nvim.git
