@@ -5,12 +5,7 @@ SAVEHIST=10000
 
 export PANEL_FIFO=/tmp/panelfifo
 
-##--Expeditors specific settings--##
-#export http_proxy=http://nss.chq.ei:8080
-export https_proxy=$http_proxy
-export ftp_proxy=$http_proxy
-export rsync_proxy=$http_proxy
-##--End Expeditors--##
+. /home/chq-stephenco/proxy_configs
 
 export PATH=/home/stephen/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
