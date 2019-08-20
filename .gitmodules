@@ -1,18 +1,76 @@
-[submodule "vim/pack/cotste/start/VimCompletesMe"]
-	path = vim/pack/cotste/start/VimCompletesMe
-	url = https://github.com/ajh17/VimCompletesMe
 [submodule "vim/pack/cotste/start/vimtex"]
 	path = vim/pack/cotste/start/vimtex
 	url = https://github.com/lervag/vimtex
 [submodule "vim/pack/cotste/start/vim-ps1"]
-	path = vim/pack/cotste/start/vim-ps1
+	path = vim/pack/cotste/opt/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
-[submodule "vim/pack/cotste/start/vim-tmux-navigator"]
-	path = vim/pack/cotste/start/vim-tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator.git
-[submodule "vim/pack/cotste/start/vim-airline"]
-	path = vim/pack/cotste/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/pack/cotste/opt/ale"]
+	path = vim/pack/cotste/opt/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "vim/pack/cotste/start/tern_for_vim"]
+	path = vim/pack/cotste/start/tern_for_vim
+	url = https://github.com/ternjs/tern_for_vim.git
 [submodule "vim/pack/cotste/start/vim-airline-themes"]
 	path = vim/pack/cotste/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "vim/pack/cotste/start/vim-airline"]
+	path = vim/pack/cotste/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/pack/cotste/start/vim-fugitive"]
+	path = vim/pack/cotste/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/pack/cotste/start/vim-tmux-navigator"]
+	path = vim/pack/cotste/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "vim/pack/cotste/start/nerdtree-git-plugin"]
+	path = vim/pack/cotste/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "vim/pack/cotste/start/nerdtree"]
+	path = vim/pack/cotste/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/pack/cotste/start/YouCompleteMe"]
+	path = vim/pack/cotste/start/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/pack/cotste/opt/riv.vim"]
+	path = vim/pack/cotste/opt/riv.vim
+  url = https://github.com/gu-fan/riv.vim.git
+[submodule "vim/pack/cotste/opt/nord-vim"]
+  path = vim/pack/cotste/opt/nord-vim
+  url = https://github.com/arcticicestudio/nord-vim.git
+[submodule "vim/pack/cotste/start/vim-devicons"]
+  path = vim/pack/cotste/start/vim-devicons
+  url = https://github.com/ryanoasis/vim-devicons.git
+[submodule "vim/pack/cotste/start/vim-ps1"]
+  path = vim/pack/cotste/start/vim-ps1
+  url = https://github.com/PProvost/vim-ps1.git
+[submodule "vim/pack/cotste/opt/srcery-vim"]
+	path = vim/pack/cotste/opt/srcery-vim
+	url = https://github.com/srcery-colors/srcery-vim
+[submodule "nvim/pack/cotste/start/vim-airline-themes"]
+	path = nvim/pack/cotste/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "nvim/pack/cotste/start/vim-airline"]
+	path = nvim/pack/cotste/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "nvim/pack/cotste/start/vim-fugitive"]
+	path = nvim/pack/cotste/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "nvim/pack/cotste/start/vim-tmux-navigator"]
+	path = nvim/pack/cotste/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "nvim/pack/cotste/opt/nord-vim"]
+	path = nvim/pack/cotste/opt/nord-vim
+	url = https://github.com/arcticicestudio/nord-vim.git
+[submodule "nvim/pack/cotste/opt/riv-vim"]
+	path = nvim/pack/cotste/opt/riv-vim
+	url = https://github.com/gu-fan/riv.vim.git
+[submodule "nvim/pack/cotste/opt/coc.nvim"]
+	path = nvim/pack/cotste/opt/coc.nvim
+	url = https://github.com/neoclide/coc.nvim.git
+	branch = release
+[submodule "nvim/pack/cotste/opt/defx"]
+	path = nvim/pack/cotste/opt/defx
+	url = https://github.com/Shougo/defx.nvim.git
+[submodule "vim/pack/cotste/start/vim-airline"]
+	path = vim/pack/cotste/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git

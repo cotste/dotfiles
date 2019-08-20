@@ -3,18 +3,19 @@ HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
-##--Expeditors specific settings--##
-#export http_proxy=http://nss.chq.ei:8080
-export https_proxy=$http_proxy
-export ftp_proxy=$http_proxy
-export rsync_proxy=$http_proxy
-##--End Expeditors--##
+#nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH=/home/stephen/bin:$PATH
+. /home/chq-stephenco/proxy_configs
+
+export PATH=/mnt/c/Users/chq-stephenco/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
 #export CLASSPATH=/usr/share/maven-repo/
 export EDITOR=vim
+#source ~/qmk_utils/activate_wsl.sh 
 
 setopt correct appendhistory autocd extendedglob nomatch notify inc_append_history
 unsetopt beep
@@ -80,13 +81,13 @@ function spectrum_bls() {
 d=.dircolors
 test -r $d && eval "$(dircolors $d)"
 
-# vcs_info configuration
-autoload -Uz vcs_info
-#zstyle ':vcs_info:*' formats '(%b)%{%f%}'
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' stagedstr '%{%F{yellow}%B%}%{%f%}'
-zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}%{%f%}'
-zstyle ':vcs_info:*' formats "%{%F{012}%}%{%F{012}%} %b %c%u%{%f%} %{%F{012}%} %{%F{007}%}"
+## vcs_info configuration
+#autoload -Uz vcs_info
+##zstyle ':vcs_info:*' formats '(%b)%{%f%}'
+#zstyle ':vcs_info:*' check-for-changes true
+#zstyle ':vcs_info:*' stagedstr '%{%F{yellow}%B%}%{%f%}'
+#zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}%{%f%}'
+#zstyle ':vcs_info:*' formats "%{%F{012}%}%{%F{012}%} %b %c%u%{%f%} %{%F{012}%} %{%F{007}%}"
 
 if [[ "$TERM" == "xterm" ]]; then
 	export TERM=xterm-256color
@@ -100,12 +101,12 @@ function precmd() {
 		else
 				PR_PWDCOLOR="%{%F{001}%}"
 		fi
-		vcs_info
+		#vcs_info
 
 }
 
-#autoload -U promptinit; promptinit
-#prompt pure
+autoload -U promptinit; promptinit
+# prompt pure
 
 
 setprompt() {
@@ -115,7 +116,6 @@ setprompt() {
 
 	if [[ "$terminfo[colors]" -ge 256 ]]; then
 		autoload -U colors && colors
-	
 
 #		for color in red green yellow white black blue cyan gray; do
 #			eval pr_$color='%{$fg[${(l)color}]%}'
