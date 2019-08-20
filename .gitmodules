@@ -71,3 +71,6 @@
 [submodule "nvim/pack/cotste/opt/defx"]
 	path = nvim/pack/cotste/opt/defx
 	url = https://github.com/Shougo/defx.nvim.git
+[submodule "vim/pack/cotste/start/vim-airline"]
+	path = vim/pack/cotste/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
