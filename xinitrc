@@ -16,9 +16,9 @@ xset fp rehash
 
 #cairo-compmgr &
 
-#xcompmgr &
+xcompmgr &
 
-urxvtd &
+#urxvtd &
 
 sh ~/.fehbg &
 
@@ -26,7 +26,7 @@ numlockx &
 
 xbindkeys & 
 
-xrdb ~/.Xresources &
+#xrdb ~/.Xresources &
 
 #thunar --daemon &
 
@@ -43,8 +43,8 @@ xrdb ~/.Xresources &
 conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
 
 #nm-applet & 
-
+exec dwm
 #exec i3
 #exec /home/stephen/bin/startdwm
-exec awesome
+#exec awesome
 #exec wmii

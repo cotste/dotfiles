@@ -8,7 +8,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-. /home/chq-stephenco/proxy_configs
+#. /home/chq-stephenco/proxy_configs
+
+fpath+=("$HOME/repos/pure")
 
 export PATH=/mnt/c/Users/chq-stephenco/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
@@ -106,7 +108,7 @@ function precmd() {
 }
 
 autoload -U promptinit; promptinit
-# prompt pure
+prompt pure
 
 
 setprompt() {
@@ -142,7 +144,7 @@ setprompt() {
 	fi
 }
 
-setprompt
+#setprompt
 
 if [ $(tty) = '/dev/tty1' ]; then
 	startx 2> /dev/null
