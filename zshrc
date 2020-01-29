@@ -10,6 +10,8 @@ export NVM_DIR="$HOME/.nvm"
 
 . /home/chq-stephenco/proxy_configs
 
+fpath+=("$HOME/repos/thirdparty/pure")
+
 export PATH=/mnt/c/Users/chq-stephenco/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
@@ -106,7 +108,7 @@ function precmd() {
 }
 
 autoload -U promptinit; promptinit
-# prompt pure
+prompt pure
 
 
 setprompt() {
@@ -142,7 +144,7 @@ setprompt() {
 	fi
 }
 
-setprompt
+#setprompt
 
 if [ $(tty) = '/dev/tty1' ]; then
 	startx 2> /dev/null
@@ -159,9 +161,8 @@ alias lsa="ls -Al"
 alias lsl="ls -l"
 alias du1="du -h --max-depth=1"
 
-#alias to make Octopress not glob
-alias rake="noglob rake"
-
 alias vi="vim"
 
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
