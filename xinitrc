@@ -1,6 +1,8 @@
 #!/bin/sh
 #
 # ~/.xinitrc
+
+source /home/chq-stephenco/.proxyconfigs
 #
 # Executed by startx (run your window manager from here)
 
@@ -18,9 +20,9 @@ xset fp rehash
 
 xcompmgr &
 
-#urxvtd &
+sh /home/chq-stephenco/bin/work_monitors.sh &
 
-sh ~/.fehbg &
+urxvtd &
 
 numlockx &
 
@@ -36,11 +38,15 @@ xbindkeys &
 
 #mpd &
 
+mopidy &
+
 #systemd --user &
 
 #sh ~/code/shell/paperchanger.sh &
 
 conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
+
+sh ~/.fehbg &
 
 #nm-applet & 
 exec dwm

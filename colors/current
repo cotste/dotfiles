@@ -30,8 +30,8 @@ URxvt.color14: #46a4ff
 URxvt.color7:	#cccccc
 URxvt.color15: #ffffff
 
-!URxvt.background: rgba:0000/0000/0000/dddd
-*.background: #1c1c1c
+URxvt.background: rgba:0000/0000/0000/0000
+!*.background: #1c1c1c
 *.foreground: white
 
 
