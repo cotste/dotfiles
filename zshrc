@@ -16,7 +16,7 @@ export PATH=/mnt/c/Users/chq-stephenco/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
 #export CLASSPATH=/usr/share/maven-repo/
-export EDITOR=vim
+export EDITOR=nvim
 #source ~/qmk_utils/activate_wsl.sh 
 
 setopt correct appendhistory autocd extendedglob nomatch notify inc_append_history
@@ -164,6 +164,8 @@ alias du1="du -h --max-depth=1"
 #alias to make Octopress not glob
 alias rake="noglob rake"
 
-alias vi="vim"
+#alias vi="vim"
 
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

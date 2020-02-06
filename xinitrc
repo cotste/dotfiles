@@ -22,11 +22,11 @@ xcompmgr &
 
 sh /home/chq-stephenco/bin/work_monitors.sh &
 
-urxvtd &
+#urxvtd &
 
-numlockx &
+#numlockx &
 
-xbindkeys & 
+#xbindkeys & 
 
 #xrdb ~/.Xresources &
 
@@ -38,7 +38,7 @@ xbindkeys &
 
 #mpd &
 
-mopidy &
+#mopidy &
 
 #systemd --user &
 

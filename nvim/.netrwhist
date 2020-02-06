@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/chq-stephenco/repos/expd/sa-unix/ansible/roles'
+let g:netrw_dirhist_2='/home/chq-stephenco/repos/expd/sa-unix/ansible'
+let g:netrw_dirhist_1='/home/chq-stephenco/repos/expd/sa-unix'
