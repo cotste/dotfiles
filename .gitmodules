@@ -74,3 +74,6 @@
 [submodule "vim/pack/cotste/start/vim-airline"]
 	path = vim/pack/cotste/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
+[submodule "nvim/pack/cotste/opt/ale"]
+	path = nvim/pack/cotste/opt/ale
+	url = https://github.com/dense-analysis/ale.git
