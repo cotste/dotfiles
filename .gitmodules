@@ -77,3 +77,6 @@
 [submodule "nvim/pack/cotste/opt/ale"]
 	path = nvim/pack/cotste/opt/ale
 	url = https://github.com/dense-analysis/ale.git
+[submodule "nvim/pack/cotste/opt/gruvbox"]
+	path = nvim/pack/cotste/opt/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
