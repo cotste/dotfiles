@@ -3,6 +3,9 @@ HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
+# WSL Display export
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'):0
+
 #nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

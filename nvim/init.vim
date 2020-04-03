@@ -11,6 +11,8 @@
     set shiftwidth=4
     set expandtab
     set background=dark
+    set nomodeline
+    set noshowmode
 
     set rtp+=~/.fzf
 
@@ -39,7 +41,7 @@
 
 "Line numbering
     ":set number relativenumber
-    :set number
+    set number
     
     ":augroup numbertoggle
     ":  autocmd!
@@ -78,8 +80,9 @@
         nnoremap <silent><buffer><expr> u defx#do_action('cd', ['..'])
         nnoremap <silent><buffer><expr> I defx#do_action('toggle_ignored_files')
         nnoremap <silent><buffer><expr> sv defx#do_action('multi', [['drop', 'vsplit'], 'quit'])
+        nnoremap <silent><buffer><expr> sh defx#do_action('multi', [['drop', 'split'], 'quit'])
         nnoremap <silent><buffer><expr> y defx#do_action('yank_path')
-        nnoremap <silent><buffer><expr> cd defx#do_action('change_vim_cwd')
+        nnoremap <silent><buffer><expr> <leader>c defx#do_action('change_vim_cwd')
         nnoremap <silent><buffer><expr> m defx#do_action('new_file')
         nnoremap <silent><buffer><expr> d defx#do_action('remove')
         nnoremap <silent><buffer><expr> / defx#do_action('search')
@@ -103,7 +106,7 @@ set updatetime=300
 set shortmess+=c
 
 " always show signcolumns
-set signcolumn=yes
+set signcolumn="yes:3"
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.

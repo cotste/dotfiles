@@ -74,3 +74,9 @@
 [submodule "vim/pack/cotste/start/vim-airline"]
 	path = vim/pack/cotste/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
+[submodule "nvim/pack/cotste/start/vim-devicons"]
+	path = nvim/pack/cotste/start/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons.git
+[submodule "nvim/pack/cotste/opt/vim-one"]
+	path = nvim/pack/cotste/opt/vim-one
+	url = https://github.com/rakr/vim-one.git
