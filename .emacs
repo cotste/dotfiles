@@ -16,7 +16,6 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
-(setq inhibit-splash-screen t)
 
 (transient-mark-mode 1)
 
@@ -51,16 +50,44 @@
 
   (add-hook 'with-editor-mode-hook 'evil-insert-state))
 
+;; Programming
+(setq-default tab-width 2)
+
+;; Company
+(use-package company)
+(add-hook 'after-init-hook 'global-company-mode)
+(global-set-key (kbd "M-/") 'company-complete-common)
+
+;; Python
+(use-package python-mode)
+
+(use-package elpy)
+(elpy-enable)
+(add-hook 'elpy-mode-hook 'flycheck-mode)
+
+(use-package py-autopep8)
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+
+(use-package company-jedi)
+(add-to-list 'company-backends 'company-jedi)
+
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+
 ;; Misc
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
+(setq inhibit-splash-screen t)
 
 (setq scroll-conservatively 100)
 
+(global-display-line-numbers-mode)
+
 ;; Fonts
 (add-to-list 'default-frame-alist
-	     '(font . "Inconsolata-14"))
+						 '(font . "Inconsolata-14"))
 
 ;; Theme
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
@@ -77,11 +104,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   (quote
-    ("7f6d4aebcc44c264a64e714c3d9d1e903284305fd7e319e7cb73345a9994f5ef" default)))
+	 (quote
+		("78c1c89192e172436dbf892bd90562bc89e2cc3811b5f9506226e735a953a9c6" "487cfc75d735a297baceb6e531b3de722a587ae73b301250382964d9ae13939f" "76c5b2592c62f6b48923c00f97f74bcb7ddb741618283bdb2be35f3c0e1030e3" "7f6d4aebcc44c264a64e714c3d9d1e903284305fd7e319e7cb73345a9994f5ef" default)))
  '(package-selected-packages
-   (quote
-    (evil-magit diff-hl aggressive-indent zenburn-theme nord-theme evil))))
+	 (quote
+		(base16-theme py-autopep8 elpy python-mode company evil-magit diff-hl aggressive-indent zenburn-theme nord-theme evil))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -89,4 +116,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
