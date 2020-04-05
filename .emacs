@@ -13,6 +13,9 @@
 (eval-when-compile
   (require 'use-package))
 
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
 (setq inhibit-splash-screen t)
 
 (transient-mark-mode 1)
@@ -20,16 +23,27 @@
 ;; Org
 (require 'org)
 (setq org-startup-indented t)
+(setq org-log-done 'time)
+(setq org-log-done 'note)
 
 ;; Evil Mode
 ;;(require  'evil)
 (use-package evil
   :ensure t)
 (evil-mode 1)
+(setq evil-emacs-state-modes (delq 'ibuffer-mode evil-emacs-state-modes))
+
+;; Git
+(use-package diff-hl
+  :config
+  (add-hook 'progmode-hook 'turn-on-diff-hl-mode)
+  (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode))
 
 ;; Misc
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+(scroll-bar-mode -1)
+(setq scroll-conservatively 100)
 
 ;; Fonts
 (add-to-list 'default-frame-alist
@@ -52,7 +66,9 @@
  '(custom-safe-themes
    (quote
     ("7f6d4aebcc44c264a64e714c3d9d1e903284305fd7e319e7cb73345a9994f5ef" default)))
- '(package-selected-packages (quote (aggressive-indent zenburn-theme nord-theme evil))))
+ '(package-selected-packages
+   (quote
+    (diff-hl aggressive-indent zenburn-theme nord-theme evil))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
