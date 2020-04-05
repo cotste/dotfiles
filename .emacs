@@ -39,6 +39,18 @@
   (add-hook 'progmode-hook 'turn-on-diff-hl-mode)
   (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode))
 
+(use-package magit
+  :bind
+  ("C-x g" . magit-status)
+
+  :config
+  (use-package evil-magit)
+  (use-package with-editor)
+  (setq magit-push-always-verify nil)
+  (setq git-commit-summmary-max-length 50)
+
+  (add-hook 'with-editor-mode-hook 'evil-insert-state))
+
 ;; Misc
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -69,7 +81,7 @@
     ("7f6d4aebcc44c264a64e714c3d9d1e903284305fd7e319e7cb73345a9994f5ef" default)))
  '(package-selected-packages
    (quote
-    (diff-hl aggressive-indent zenburn-theme nord-theme evil))))
+    (evil-magit diff-hl aggressive-indent zenburn-theme nord-theme evil))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
