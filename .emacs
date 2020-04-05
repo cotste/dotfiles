@@ -43,22 +43,19 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
+
 (setq scroll-conservatively 100)
 
 ;; Fonts
-;;(add-to-list 'default-frame-alist
-;;	     '(font . "Inconsolata"))
+(add-to-list 'default-frame-alist
+	     '(font . "Inconsolata-14"))
 
 ;; Theme
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
 
-(use-package nord-theme
-  :ensure t)
 (load-theme 'nord t)
 
 ;; Indentation
-(use-package aggressive-indent
-  :ensure t)
 (global-aggressive-indent-mode 1)
 (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
 
