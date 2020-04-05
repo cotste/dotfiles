@@ -32,7 +32,6 @@ while true; do
   BAT=$(acpi | grep 'Battery 0' | awk ' {print $4} ' | sed 's/.$//')
   #BAT1=$(acpi | grep 'Battery 1' | awk ' {print $4} ' | sed 's/.$//')
   echo -e "B$BAT"
-  #echo -e "B1$BAT1"
   sleep 10
 done > "$PANEL_FIFO" &
 
@@ -44,8 +43,8 @@ done > "$PANEL_FIFO" &
 
 while true; do
   wifi_ap=$(iwconfig 2>&1 |grep ESSID | awk ' {print $4} ' | sed 's/ESSID:"//;s/.$//')
-  wifi_qual=$(iwconfig 2>&1 |grep 'Link Quality' | awk ' {print $2} ' | sed 's/Quality=//;s/\/..//')
-  echo -e "W$wifi_ap - $wifi_qual"
+  wifi_qual=$(iwconfig 2>&1 |grep 'Link Quality' | awk ' {print $4} ' | sed 's/level=//;s/\/..//') 
+  echo -e "W$wifi_ap - $wifi_qual dBm"
   sleep 10
 done >  "$PANEL_FIFO" &
 

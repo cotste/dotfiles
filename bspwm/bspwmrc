@@ -25,5 +25,7 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Surf desktop='^2' state=tiled
 bspc rule -a mpv desktop='^5' state=fullscreen
 
-~/.config/bspwm/mypanel &
+#~/.config/bspwm/mypanel &
+
+polybar example &
 
