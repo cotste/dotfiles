@@ -78,11 +78,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   (quote
-    ("7f6d4aebcc44c264a64e714c3d9d1e903284305fd7e319e7cb73345a9994f5ef" default)))
+	 (quote
+		("7f6d4aebcc44c264a64e714c3d9d1e903284305fd7e319e7cb73345a9994f5ef" default)))
  '(package-selected-packages
-   (quote
-    (evil-magit diff-hl aggressive-indent zenburn-theme nord-theme evil))))
+	 (quote
+		(powerline org-chef evil-magit diff-hl aggressive-indent zenburn-theme nord-theme evil))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -90,4 +90,22 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; Powerline
+(use-package powerline
+	:ensure t)
+(powerline-center-evil-theme)
+
+;; Recipes
+(use-package org-chef
+	:ensure t)
+
+;; Org Capture Templates
+(setq org-capture-templates
+			'(("c" "Cookbook" entry (file "~/org/cookbook.org")
+				 "%org-chef-get-recipe-from-url)"
+				 :empty-lines 1)
+				("m" "Manual Cookbook" entry (file "~/org/cookbook.org")
+				 "* %^{Recipe title: }\n :PROPERTIES:\n :source-url:\n :servings:\n :prep-time:\n :cook-time:\n :ready-in:\n :END:\n** Ingredients\n  %?\n** Directions\n\n"))
+			)
 
