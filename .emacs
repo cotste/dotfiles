@@ -87,7 +87,7 @@
 
 ;; Fonts
 (add-to-list 'default-frame-alist
-						 '(font . "Inconsolata-14"))
+						 '(font . "Source Code Pro"))
 
 ;; Theme
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
