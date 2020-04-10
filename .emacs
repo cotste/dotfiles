@@ -34,10 +34,10 @@
 (setq evil-emacs-state-modes (delq 'ibuffer-mode evil-emacs-state-modes))
 
 ;; Git
-(use-package diff-hl
-  :config
-  (add-hook 'progmode-hook 'turn-on-diff-hl-mode)
-  (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode))
+;;(use-package diff-hl
+;;:config
+;;(add-hook 'progmode-hook 'turn-on-diff-hl-mode)
+;;(add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode))
 
 (use-package magit
   :bind
@@ -57,15 +57,19 @@
 (scroll-bar-mode -1)
 
 (setq scroll-conservatively 100)
+(setq ring-bell-function 'ignore)
 
 ;; Fonts
 (add-to-list 'default-frame-alist
-	     '(font . "Inconsolata-14"))
+	     '(font . "Source Code Pro"))
 
 ;; Theme
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
-
-(load-theme 'nord t)
+(use-package nord-theme
+  :ensure t)
+(use-package gruvbox-theme
+  :ensure t)
+(load-theme 'gruvbox t)
 
 
 ;; Indentation
@@ -78,11 +82,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-	 (quote
-		("7f6d4aebcc44c264a64e714c3d9d1e903284305fd7e319e7cb73345a9994f5ef" default)))
+   (quote
+    ("7f6d4aebcc44c264a64e714c3d9d1e903284305fd7e319e7cb73345a9994f5ef" default)))
  '(package-selected-packages
-	 (quote
-		(powerline org-chef evil-magit diff-hl aggressive-indent zenburn-theme nord-theme evil))))
+   (quote
+    (gruvbox-theme powerline org-chef evil-magit diff-hl aggressive-indent zenburn-theme nord-theme evil))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
