@@ -6,6 +6,7 @@
 
 (package-initialize)
 
+
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -17,13 +18,48 @@
 (setq use-package-always-ensure t)
 
 
-(transient-mark-mode 1)
+;; Theme
+(add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
+(use-package nord-theme
+  :ensure t)
+(use-package gruvbox-theme
+  :ensure t)
+(load-theme 'gruvbox t)
+
 
 ;; Org
-(require 'org)
+(use-package org)
+(setq org-hide-emphasis-markers t)
 (setq org-startup-indented t)
 (setq org-log-done 'time)
 (setq org-log-done 'note)
+(add-hook 'org-mode-hook 'visual-line-mode)
+(add-hook 'org-mode-hook (lambda () (linum-mode 0)))
+
+(use-package org-bullets
+	:config
+	(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+(let* ((variable-tuple
+        (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
+              ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
+              ((x-list-fonts "Verdana")         '(:font "Verdana"))
+              ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
+              (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
+       (base-font-color     (face-foreground 'default nil 'default))
+       (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
+
+	(custom-theme-set-faces
+	 'user
+	 `(org-level-8 ((t (,@headline ,@variable-tuple))))
+	 `(org-level-7 ((t (,@headline ,@variable-tuple))))
+	 `(org-level-6 ((t (,@headline ,@variable-tuple))))
+	 `(org-level-5 ((t (,@headline ,@variable-tuple))))
+	 `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
+	 `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))
+	 `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
+	 `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
+	 `(org-document-title ((t (,@headline ,@variable-tuple :height 2.0 :underline nil))))))
 
 ;; Evil Mode
 ;;(require  'evil)
@@ -56,9 +92,10 @@
 ;; Company
 (use-package company)
 (add-hook 'after-init-hook 'global-company-mode)
-(global-set-key (kbd "M-/") 'company-complete-common)
+(global-set-key (kbd "M-<space>") 'company-complete-common)
 
 ;; Python
+(setq python-shell-interpreter "python3")
 (use-package python-mode)
 
 (use-package elpy)
@@ -86,17 +123,11 @@
 
 (global-display-line-numbers-mode)
 
+(transient-mark-mode 1)
+
 ;; Fonts
 (add-to-list 'default-frame-alist
-  '(font . "Source Code Pro"))
-
-;; Theme
-(add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
-(use-package nord-theme
-  :ensure t)
-(use-package gruvbox-theme
-  :ensure t)
-(load-theme 'gruvbox t)
+						 '(font . "Source Code Pro"))
 
 
 ;; Indentation
@@ -113,7 +144,7 @@
 		("78c1c89192e172436dbf892bd90562bc89e2cc3811b5f9506226e735a953a9c6" "487cfc75d735a297baceb6e531b3de722a587ae73b301250382964d9ae13939f" "76c5b2592c62f6b48923c00f97f74bcb7ddb741618283bdb2be35f3c0e1030e3" "7f6d4aebcc44c264a64e714c3d9d1e903284305fd7e319e7cb73345a9994f5ef" default)))
  '(package-selected-packages
 	 (quote
-		(gruvbox-theme powerline org-chef base16-theme py-autopep8 elpy python-mode company evil-magit diff-hl aggressive-indent zenburn-theme nord-theme evil))))
+		(org-bullets gruvbox-theme powerline org-chef base16-theme py-autopep8 elpy python-mode company evil-magit diff-hl aggressive-indent zenburn-theme nord-theme evil))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
