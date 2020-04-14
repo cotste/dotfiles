@@ -11,7 +11,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-. /home/chq-stephenco/proxy_configs
+if [[ -f /home/chq-stephenco/proxy_configs ]]; then
+  . /home/chq-stephenco/proxy_configs
+fi
 
 fpath+=("$HOME/repos/thirdparty/pure")
 
