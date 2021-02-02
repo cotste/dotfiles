@@ -4,7 +4,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # WSL Display export
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'):0
+#export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'):0
 
 #nvm
 export NVM_DIR="$HOME/.nvm"
