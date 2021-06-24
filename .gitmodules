@@ -80,3 +80,6 @@
 [submodule "nvim/pack/cotste/opt/vim-one"]
 	path = nvim/pack/cotste/opt/vim-one
 	url = https://github.com/rakr/vim-one.git
+[submodule "vim/pack/cotste/start/markdown-preview.nvim"]
+	path = vim/pack/cotste/start/markdown-preview.nvim
+	url = https://github.com/iamcco/markdown-preview.nvim.git

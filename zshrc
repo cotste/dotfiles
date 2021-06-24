@@ -1,3 +1,5 @@
+umask 022
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zhistfile
 HISTSIZE=10000
@@ -5,19 +7,24 @@ SAVEHIST=10000
 
 # WSL Display export
 #export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'):0
+export DISPLAY=$(ip route | awk '/^default/{print $3; exit}'):0.0
+export LIBGL_ALWAYS_INDIRECT=1
 
 #nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-if [[ -f /home/chq-stephenco/proxy_configs ]]; then
-  . /home/chq-stephenco/proxy_configs
+if [[ -f /mnt/c/Users/chq-stephenco/proxy_configs ]]; then
+  . /mnt/c/Users/chq-stephenco/proxy_configs
 fi
 
-fpath+=("$HOME/repos/thirdparty/pure")
+fpath+=("$HOME/.zsh/pure")
 
-export PATH=/mnt/c/Users/chq-stephenco/bin:$PATH
+#WSL Browser
+export BROWSER="/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe"
+
+export PATH=/mnt/c/Users/chq-stephenco/bin:/home/chq-stephenco/.local/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
 #export CLASSPATH=/usr/share/maven-repo/
@@ -138,8 +145,11 @@ setprompt() {
 #${pr_bright_blue}\u2587${pr_red}\u2518${pr_bright_white}%n${pr_blue}@${pr_bright_blue}%m ${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue})
 #${pr_bright_blue}\u2514${pr_green}\u2586${pr_reset} '
 
+#		prompt=$'
+#%{%F{014}%}%n%{%F{012}%} ⇨ %{%F{004}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
+#%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
 		prompt=$'
-%{%F{014}%}%n%{%F{012}%} ⇨ %{%F{004}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
+%{%F{014}%}%n%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
 %{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
 #		prompt=$'
 #${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue}) ${vcs_info_msg_0_}> ${pr_reset}'
@@ -151,10 +161,10 @@ setprompt() {
 
 #setprompt
 
-if [ $(tty) = '/dev/tty1' ]; then
-	startx 2> /dev/null
-	logout
-fi
+#if [ $(tty) = '/dev/tty1' ]; then
+#	startx 2> /dev/null
+#	logout
+#fi
 
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
@@ -170,4 +180,4 @@ alias vi="vim"
 
 
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
