@@ -145,17 +145,22 @@ setprompt() {
 #${pr_bright_blue}\u2587${pr_red}\u2518${pr_bright_white}%n${pr_blue}@${pr_bright_blue}%m ${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue})
 #${pr_bright_blue}\u2514${pr_green}\u2586${pr_reset} '
 
-#		prompt=$'
+		prompt=$'
 #%{%F{014}%}%n%{%F{012}%} ⇨ %{%F{004}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
 #%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
-		prompt=$'
-%{%F{014}%}%n%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
-%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
 #		prompt=$'
+#%{%F{014}%}%n%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
+#%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
+
+    #		prompt=$'
 #${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue}) ${vcs_info_msg_0_}> ${pr_reset}'
 	else
 
-		prompt=$'%n@%m (%~)\n>>> '
+		prompt=$'
+#%{%F{014}%}%n%{%F{012}%} ⇨ %{%F{004}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
+#%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
+
+    #		prompt=$'%n@%m (%~)\n>>> '
 	fi
 }
 
