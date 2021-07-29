@@ -1,18 +1,32 @@
+##umask 022
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zhistfile
 HISTSIZE=10000
 SAVEHIST=10000
 
+# WSL Display export
+#export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'):0
+#export DISPLAY=$(ip route | awk '/^default/{print $3; exit}'):0.0
+#export LIBGL_ALWAYS_INDIRECT=1
+
 #nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#if [[ -f /mnt/c/Users/chq-stephenco/proxy_configs ]]; then
+#  . /mnt/c/Users/chq-stephenco/proxy_configs
+#fi
 
 #. /home/chq-stephenco/proxy_configs
 
 fpath+=("$HOME/repos/pure")
 
-export PATH=/mnt/c/Users/chq-stephenco/bin:$PATH
+#WSL Browser
+#export BROWSER="/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe"
+
+#export PATH=/mnt/c/Users/chq-stephenco/bin:/home/chq-stephenco/.local/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
 #export CLASSPATH=/usr/share/maven-repo/
@@ -107,7 +121,7 @@ function precmd() {
 
 }
 
-#autoload -U promptinit; promptinit
+autoload -U promptinit; promptinit
 #prompt pure
 
 
@@ -134,9 +148,13 @@ setprompt() {
 #${pr_bright_blue}\u2514${pr_green}\u2586${pr_reset} '
 
 		prompt=$'
-%{%F{014}%}%n%{%F{012}%} ⇨ %{%F{004}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
-%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
+#%{%F{014}%}%n%{%F{012}%} ⇨ %{%F{004}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
+#%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
 #		prompt=$'
+#%{%F{014}%}%n%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
+#%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
+
+    #		prompt=$'
 #${pr_reset}${pr_blue}(${pr_pwdcolor}%~${pr_blue}) ${vcs_info_msg_0_}> ${pr_reset}'
 	else
 
@@ -145,15 +163,19 @@ setprompt() {
 %{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
 
 #	prompt=$'%n@%m (%~)\n>>> '
+#%{%F{014}%}%n%{%F{012}%} ⇨ %{%F{004}%}%m%{%F{012}%} ⇨ ${PR_PWDCOLOR}%~ ${vcs_info_msg_0_}
+#%{%b%}${pr_reset}%{%F{014}%}➤%{%F{004}%}➤%{%F{008}%}➤%{%f%} '
+
+    #		prompt=$'%n@%m (%~)\n>>> '
 	fi
 }
 
 setprompt
 
-if [ $(tty) = '/dev/tty1' ]; then
-	startx 2> /dev/null
-	logout
-fi
+#if [ $(tty) = '/dev/tty1' ]; then
+#	startx 2> /dev/null
+#	logout
+#fi
 
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
@@ -173,3 +195,5 @@ alias rake="noglob rake"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias vi="vim"
+

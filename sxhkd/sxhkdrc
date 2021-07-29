@@ -13,9 +13,25 @@ super + p
 super + r
   rofi -show run
 
+super + p
+  rofi -show drun
+
+super + r
+  rofi -show run
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+###################
+# Polybar hotkeys
+###################
+
+super + ctrl + p
+      polybar-msg cmd hide
+
+super + shift + p
+      polybar-msg cmd show
 
 #
 # bspwm hotkeys
@@ -92,19 +108,19 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-alt + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+#super + ctrl + {h,j,k,l}
+#	bspc node -p {west,south,north,east}
 
 # preselect the ratio
-alt + ctrl + {1-9}
+super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-alt + ctrl + space
+super + ctrl + space
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-alt + ctrl + shift + space
+super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #

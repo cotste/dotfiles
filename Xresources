@@ -1,4 +1,5 @@
 #include "/home/chq-stephenco/.currcolors"
+!#include "/home/stephen/currcolors"
 !#include "colors/current"
 
 ! URxvt -----------------------------------------------------------------------
@@ -23,3 +24,6 @@ xterm*faceName:				Inconsolata:size=9
 xterm*dynamicColors:		true
 xterm*eightBitInput:		true
 xterm*UTF8:					true
+
+Xcursor.theme: Adwaita
+Xcursor.size: 16

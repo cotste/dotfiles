@@ -1,5 +1,10 @@
 {
-    "http.proxy" : "nss.chq.ei:8080",
-    "https.proxy" : "nss.chq.ei:8080",
     "python.jediEnabled" : false
+    "python.jediEnabled" : false,
+        //diagnostic
+        "diagnostic.signOffset": 9999999,
+        "diagnostic.errorSign": ">>",
+        "diagnostic.warningSign": ">>",
+        "diagnostic.displayByAle": false,
+        "diagnostic.refreshOnInsertMode": true
 }

@@ -15,13 +15,18 @@ bspc config window_gap           10
 bspc config active_border_color \#ECEFF4
 bspc config normal_border_color \#4C566A
 
+#bspc monitor -d term web emacs mail media foo
+
+bspc config border_width         2
+bspc config window_gap           20
 bspc config split_ratio          0.65
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
-bspc config paddingless_monocle  false
+#bspc config paddingless_monocle  false
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
+bspc rule -a Firefox desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
@@ -33,3 +38,6 @@ bspc rule -a Emacs desktop='^3' state=tiled
 ~/.config/polybar/launch.sh
 
 #KILLALL mypanel; /home/stephen/.config/bspwm/mypanel &
+
+#/home/stephen/.config/bspwm/pepperbar.sh &
+#killall mypanel; /home/stephen/.config/bspwm/mypanel &

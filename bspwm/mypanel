@@ -1,20 +1,42 @@
-#!/bin/sh
-PANEL_FONT="-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
-export PANEL_FONT
+#!/usr/bin/bash
+#PANEL_FONT="-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+#export PANEL_FONT
 
 #"-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1"
 PANEL_FIFO=/tmp/panelfifo
+
+killall lemonbar
 
 battery() {
 	echo "test bat"
 }
 
+desktop_names() {
+
+    echo $(bspc query -D --names)
+}
 
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
-function panel_bar {
+
+panel_bar() {
 	buf=""
-	buf="${buf} $(battery)"
+	buf="$(buf) $(battery)"
 }
 
-panel_bar | lemonbar  -g x20 -B "#222222" -F "#cccccc" -f "$PANEL_FONT" &
+while true;
+do echo -e %{r} '\uf073' $(date +'%b %d')
+   sleep 5
+done > "$PANEL_FIFO" &
+    
+
+_title() {
+#    while true; do
+        echo "  $(xtitle)  "
+#    done
+}
+
+cat "$PANEL_FIFO" | lemonbar -p -g 2550x30+5+5 -B "#cc2e3440" -F "#e5e9f0" -f "xft:FiraCode Nerd Font Mono" &
+#echo $(desktop_names) | lemonbar -p -g 2550x30+5+5 -B "#cc2e3440" -F "#e5e9f0" -f "xft:Fantasque Sans Mono" &
+#echo $(_title) | lemonbar -p -g 800x30+900+5 -B "#cc2e3440" -F "#e5e9f0" -f "xft:Fantasque Sans Mono" &
+

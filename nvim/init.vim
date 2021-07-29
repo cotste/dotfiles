@@ -11,6 +11,8 @@
     set shiftwidth=4
     set expandtab
     set background=dark
+    set nomodeline
+    set noshowmode
 
     set rtp+=~/.fzf
 
@@ -39,7 +41,7 @@
 
 "Line numbering
     ":set number relativenumber
-    :set number
+    set number
     
     ":augroup numbertoggle
     ":  autocmd!
@@ -103,7 +105,11 @@ set updatetime=300
 set shortmess+=c
 
 " always show signcolumns
+<<<<<<< HEAD
 set signcolumn=yes
+=======
+set signcolumn="yes:3"
+>>>>>>> 1ef9272ecf9a0e0a65f3a6401b6e18d94f081b1d
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
