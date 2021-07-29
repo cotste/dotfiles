@@ -1,3 +1,5 @@
 {
+    "http.proxy" : "nss.chq.ei:8080",
+    "https.proxy" : "nss.chq.ei:8080",
     "python.jediEnabled" : false
 }

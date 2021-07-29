@@ -3,10 +3,17 @@ killall sxhkd
 
 sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor DVI-0 -d term web emacs mail foo
+
+bspc monitor DisplayPort-0 -d im media vm
+
+bspc -O DVI-0 DisplayPort-0
 
 bspc config border_width         2
-bspc config window_gap           5
+bspc config window_gap           10
+
+bspc config active_border_color \#ECEFF4
+bspc config normal_border_color \#4C566A
 
 bspc config split_ratio          0.65
 bspc config borderless_monocle   true
@@ -19,6 +26,10 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Surf desktop='^2' state=fullscreen
-bspc rule -a mpv desktop='^5' state=fullscree
+bspc rule -a mpv desktop='^5' state=fullscreen
+bspc rule -a Emacs desktop='^3' state=tiled
+#bspc rule -a Firefox desktop='^2' state tiled
 
-killall mypanel; /home/stephen/.config/bspwm/mypanel &
+~/.config/polybar/launch.sh
+
+#KILLALL mypanel; /home/stephen/.config/bspwm/mypanel &

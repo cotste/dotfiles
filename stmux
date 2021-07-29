@@ -1,10 +1,12 @@
-#!/bin/sh
+#!/usr/bin/fish
 
 tmux start-server
 
-tmux new-session -s main -n terminal -d  -x $(tput cols) -y $(tput lines)
+#tmux new-session -s main -n terminal -d  -x '(tput cols)' -y '(tput lines)'
 
-tmux new-window -t main -n editor "$(pwd); nvim"
+tmux new-session -s main -n terminal -d
+
+tmux new-window -t main -n editor "'(pwd)'; nvim"
 
 tmux new-window -t main -n music "ncmpcpp"
 

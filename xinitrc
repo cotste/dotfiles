@@ -20,15 +20,15 @@ xset fp rehash
 
 xcompmgr &
 
-sh /home/chq-stephenco/bin/work_monitors.sh &
+#sh /home/chq-stephenco/bin/work_monitors.sh &
 
 #urxvtd &
 
 #numlockx &
 
-#xbindkeys & 
+xbindkeys & 
 
-#xrdb ~/.Xresources &
+xrdb ~/.Xresources &
 
 #thunar --daemon &
 
@@ -38,18 +38,23 @@ sh /home/chq-stephenco/bin/work_monitors.sh &
 
 #mpd &
 
-#mopidy &
+mopidy &
 
 #systemd --user &
 
 #sh ~/code/shell/paperchanger.sh &
 
-conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
+dunst &
+
+#conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
+
+sxhkd &
 
 sh ~/.fehbg &
 
 #nm-applet & 
-exec dwm
+#exec dwm
+exec bspwm
 #exec i3
 #exec /home/stephen/bin/startdwm
 #exec awesome
