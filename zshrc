@@ -1,4 +1,4 @@
-umask 022
+##umask 022
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zhistfile
@@ -7,24 +7,24 @@ SAVEHIST=10000
 
 # WSL Display export
 #export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'):0
-export DISPLAY=$(ip route | awk '/^default/{print $3; exit}'):0.0
-export LIBGL_ALWAYS_INDIRECT=1
+#export DISPLAY=$(ip route | awk '/^default/{print $3; exit}'):0.0
+#export LIBGL_ALWAYS_INDIRECT=1
 
 #nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-if [[ -f /mnt/c/Users/chq-stephenco/proxy_configs ]]; then
-  . /mnt/c/Users/chq-stephenco/proxy_configs
-fi
+#if [[ -f /mnt/c/Users/chq-stephenco/proxy_configs ]]; then
+#  . /mnt/c/Users/chq-stephenco/proxy_configs
+#fi
 
-fpath+=("$HOME/.zsh/pure")
+#fpath+=("$HOME/.zsh/pure")
 
 #WSL Browser
-export BROWSER="/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe"
+#export BROWSER="/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe"
 
-export PATH=/mnt/c/Users/chq-stephenco/bin:/home/chq-stephenco/.local/bin:$PATH
+#export PATH=/mnt/c/Users/chq-stephenco/bin:/home/chq-stephenco/.local/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 #export CATALINA_HOME=/usr/share/tomcat6
 #export CLASSPATH=/usr/share/maven-repo/
@@ -120,7 +120,7 @@ function precmd() {
 }
 
 autoload -U promptinit; promptinit
-prompt pure
+#prompt pure
 
 
 setprompt() {
@@ -159,7 +159,7 @@ setprompt() {
 	fi
 }
 
-#setprompt
+setprompt
 
 #if [ $(tty) = '/dev/tty1' ]; then
 #	startx 2> /dev/null

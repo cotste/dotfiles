@@ -14,17 +14,19 @@ fi
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
+picom &
+
 #cairo-compmgr &
 
 #xcompmgr &
 
-urxvtd &
+#urxvtd &
 
 sh ~/.fehbg &
 
-numlockx &
+#numlockx &
 
-xbindkeys & 
+#xbindkeys & 
 
 xrdb ~/.Xresources &
 
@@ -40,11 +42,12 @@ xrdb ~/.Xresources &
 
 #sh ~/code/shell/paperchanger.sh &
 
-conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
+#conky -c ~/.conkyrc | while read -r; do xsetroot -name "$REPLY"; done &
 
 #nm-applet & 
 
+exec bspwm
 #exec i3
 #exec /home/stephen/bin/startdwm
-exec awesome
+#exec awesome
 #exec wmii
