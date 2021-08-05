@@ -14,7 +14,7 @@ fi
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
-picom &
+picom --experimental-backends &
 
 #cairo-compmgr &
 

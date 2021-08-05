@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	st
+	alacritty
 
 # program launcher
-super + @space
-	dmenu_run
+#super + @space
+#	dmenu_run
 
 super + p
   rofi -show drun
@@ -17,7 +17,7 @@ super + r
   rofi -show run
 
 # make sxhkd reload its configuration files:
-super + Escape
+super + shift + r
 	pkill -USR1 -x sxhkd
 
 ###################
@@ -35,19 +35,23 @@ super + shift + p
 #
 
 # quit bspwm normally
-super + ctrl + Escape
-	bspc quit
+super + ctrl + {q,r}
+	bspc {quit, wm -r}
 
 # close and kill
 super + {_,shift + }w
 	bspc node -{c,k}
 
-# ctrlernate between the tiled and monocle layout
+# alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
 
-# send the newest marked node to the newest preselected node
+# mark the current node
 super + y
+  bspc node -g marked=on
+
+# send the newest marked node to the newest preselected node
+super + Y
 	bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest node
@@ -105,8 +109,8 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-#super + ctrl + {h,j,k,l}
-#	bspc node -p {west,south,north,east}
+super + alt + {h,j,k,l}
+	bspc node -p {west,south,north,east}
 
 # preselect the ratio
 super + ctrl + {1-9}
