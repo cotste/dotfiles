@@ -5,7 +5,7 @@ SAVEHIST=10000
 
 export PANEL_FIFO=/tmp/panelfifo
 
-. /home/chq-stephenco/proxy_configs
+#. /home/chq-stephenco/proxy_configs
 
 export PATH=/home/stephen/bin:$PATH
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun

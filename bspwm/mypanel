@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PANEL_FONT="-*-fixed-*-*-*-*-14-*-*-*-*-*-*-*"
+PANEL_FONT="-*-monospace-*-*-*-*-14-*-*-*-*-*-*-*"
 
 #PANEL_FONT="-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1"
 PANEL_FIFO=/tmp/panelfifo

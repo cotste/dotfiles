@@ -7,7 +7,7 @@ killall mypanel
 
 sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor primary -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         2
 bspc config window_gap           20
@@ -25,7 +25,7 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Surf desktop='^2' state=tiled
 bspc rule -a mpv desktop='^5' state=fullscreen
 
-#~/.config/bspwm/mypanel &
+~/.config/bspwm/mypanel &
 
-polybar example &
+# polybar example &
 
